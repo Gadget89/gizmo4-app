@@ -4,10 +4,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
-import GithubCorner from './GithubCorner'
 
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
+
+// Removed from query: googleTrackingId
 
 export default ({ children, meta, title }) => {
   return (
@@ -17,7 +18,6 @@ export default ({ children, meta, title }) => {
           settingsYaml {
             siteTitle
             siteDescription
-            googleTrackingId
             socialMediaCard {
               image
             }
@@ -72,8 +72,6 @@ export default ({ children, meta, title }) => {
               {...meta}
               {...data.settingsYaml}
             />
-
-            <GithubCorner url="https://github.com/thriveweb/yellowcake" />
 
             <Nav subNav={subNav} />
 

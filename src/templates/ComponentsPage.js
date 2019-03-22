@@ -15,6 +15,7 @@ export const ComponentsPageTemplate = ({
   section1,
   section2,
   accordion,
+  body,
   gallery
 }) => (
   <main>

@@ -14,10 +14,7 @@ export const ComponentsPageTemplate = ({
   featuredImage,
   section1,
   section2,
-  videoPoster,
-  video,
   accordion,
-  body,
   gallery
 }) => (
   <main>
@@ -44,12 +41,6 @@ export const ComponentsPageTemplate = ({
         <Content source={section2} />
       </div>
     </section>
-
-    {/* <section className="BackgroundVideo-section section">
-      <BackgroundVideo poster={videoPoster}>
-        {video && <source src={video} type="video/mp4" />}
-      </BackgroundVideo>
-    </section> */}
 
     <section className="section">
       <div className="container">

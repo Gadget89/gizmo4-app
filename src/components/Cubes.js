@@ -26,66 +26,55 @@ export const query = graphql`
   }
 `
 
-export default class Cube extends Component {
-    render() {
-        const { cubes } = this.props
-        return (
-                <div className="container">
-                    <div className="content clearfix">
-                        {cubes.map(cube => {
-                            return (
-                                <div
-                                    key={cube.id}
-                                    className="cube-container"
-                                >
-                                    <div className="photo-cube">
-                                        <Link to={cube.link}>
-                                            <div className="front">
-                                                <h3 className="secondary-header">
-                                                    {cube.title}
-                                                </h3>
-                                                <Img
-                                                    className="zoom-img" fluid={cube.frontImage} />
-                                            </div>
-                                        </Link>
-                                        <Link to={cube.link}>
-                                            <div className="back photo-desc">
-                                                <h3
-                                                    style={{
-                                                        color: 'white',
-                                                    }}
-                                                >
-                                                    {cube.title}
-                                                </h3>
-                                                <p style={{
-                                                    minHeight: '112px',
-                                                }}
-                                                >
-                                                    {cube.gist}
-                                                </p>
-                                                <span className="call-to-action">
-                                                    {cube.buttonText}
-                                                </span>
-                                            </div>
-                                        </Link>
-                                        <div className="left">
-                                            <Img
-                                                className="zoom-img"
-                                                fluid={cube.sideImage} />
-                                        </div>
-                                        <div className="right">
-                                            <Img
-                                                className="zoom-img"
-                                                fluid={cube.backImage} />
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
+export default class Cubes extends Component {
+  render() {
+    const { cubes } = this.props
+    return (
+      <div className="container">
+        <div className="content clearfix">
+          {cubes.map(cube => {
+            return (
+              <div key={cube.id} className="cube-container">
+                <div className="photo-cube">
+                  <Link to={cube.link}>
+                    <div className="front">
+                      <h3 className="secondary-header">{cube.title}</h3>
+                      <Img className="zoom-img" fluid={cube.frontImage} />
                     </div>
+                  </Link>
+                  <Link to={cube.link}>
+                    <div className="back photo-desc">
+                      <h3
+                        style={{
+                          color: 'white'
+                        }}
+                      >
+                        {cube.title}
+                      </h3>
+                      <p
+                        style={{
+                          minHeight: '112px'
+                        }}
+                      >
+                        {cube.gist}
+                      </p>
+                      <span className="call-to-action">{cube.buttonText}</span>
+                    </div>
+                  </Link>
+                  <div className="left">
+                    <Img className="zoom-img" fluid={cube.sideImage} />
+                  </div>
+                  <div className="right">
+                    <Img className="zoom-img" fluid={cube.backImage} />
+                  </div>
                 </div>
-        )
-    }
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
 }
 
 // Gallery.propTypes = {

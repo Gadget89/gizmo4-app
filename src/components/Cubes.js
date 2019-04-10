@@ -28,11 +28,12 @@ export const query = graphql`
 
 export default class Cubes extends Component {
   render() {
-    const { cubes } = this.props
+    const { items } = this.props
+    console.log(items);
     return (
       <div className="container">
         <div className="content clearfix">
-          {cubes.map(cube => {
+          {items.map(cube => {
             return (
               <div key={cube.id} className="cube-container">
                 <div className="photo-cube">

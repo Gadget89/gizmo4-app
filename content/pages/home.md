@@ -2,6 +2,7 @@
 template: HomePage
 slug: ''
 title: Yellowcake
+featuredImage: 'https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/'
 cubes: 
   - id: portfolio
     link: '/components'

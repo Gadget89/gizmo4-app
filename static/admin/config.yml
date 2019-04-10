@@ -203,16 +203,33 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
-          - label: 'Accordion'
-            name: 'accordion'
-            widget: 'list'
+          - label: 'Cubes'
+            name: 'cubes'
+            widget: 'object'
             required: false
             fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: Content, name: content, widget: text }
+              - { label: Title, name: title, widget: text }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: Gist, name: gist, widget: text }
+              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Front Image, name: frontImage, widget: image }
+              - { label: Side Image, name: sideImage, widget: image }
+              - { label: Back Image, name: backImage, widget: image }
+              - { label: Title, name: title, widget: text }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: Gist, name: gist, widget: text }
+              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Front Image, name: frontImage, widget: image }
+              - { label: Side Image, name: sideImage, widget: image }
+              - { label: Back Image, name: backImage, widget: image }
+              - { label: Title, name: title, widget: text }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: Gist, name: gist, widget: text }
+              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Front Image, name: frontImage, widget: image }
+              - { label: Side Image, name: sideImage, widget: image }
+              - { label: Back Image, name: backImage, widget: image }
           - label: 'Meta'
             required: false
             name: 'meta'

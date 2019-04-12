@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 // import PropTypes from 'prop-types'
 // import { graphql } from 'gatsby'
-// import Image from './Image'
+import Image from './Image'
 
 // import _kebabCase from 'lodash/kebabCase'
 
@@ -29,7 +29,6 @@ export const query = graphql`
 export default class Cubes extends Component {
   render() {
     const { items } = this.props
-    console.log(items);
     return (
       <div className="container">
         <div className="content clearfix">
@@ -40,7 +39,7 @@ export default class Cubes extends Component {
                   <Link to={cube.link}>
                     <div className="front">
                       <h3 className="secondary-header">{cube.title}</h3>
-                      <Img className="zoom-img" fluid={cube.frontImage} />
+                      <Image resolutions="small" src={cube.frontImage} alt="" />
                     </div>
                   </Link>
                   <Link to={cube.link}>
@@ -63,10 +62,10 @@ export default class Cubes extends Component {
                     </div>
                   </Link>
                   <div className="left">
-                    <Img className="zoom-img" fluid={cube.sideImage} />
+                    <Image resolutions="small" src={cube.sideImage} alt="" />
                   </div>
                   <div className="right">
-                    <Img className="zoom-img" fluid={cube.backImage} />
+                    <Image resolutions="small" src={cube.backImage} alt="" />
                   </div>
                 </div>
               </div>

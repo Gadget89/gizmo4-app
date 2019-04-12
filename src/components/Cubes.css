@@ -3,13 +3,13 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
-h1,
+/* h1,
 h2,
 h3,
 h4 {
     text-transform: uppercase;
     color: #272727;
-}
+} */
 
 /* form {
     margin: 0 auto;
@@ -67,11 +67,11 @@ textarea:focus {
 .content {
     margin: 0 auto;
 }
-.container {
+/* .container {
     display: inline-block;
     width: 95vw;
     padding-top: 8vh;
-}
+} */
 /* .main-header {
     text-align: center;
     padding: 2.8em 0 3.8em;
@@ -217,9 +217,9 @@ textarea:focus {
         max-width: 900px;
         margin: auto;
     }
-    .container {
+    /* .container {
         padding-top: 33vh;
-    }
+    } */
 }
 /* @media (max-width: 320px) {
 

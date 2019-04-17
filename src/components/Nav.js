@@ -1,20 +1,34 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
+import TopBarProgress from 'react-topbar-progress-indicator'
 import { AlignRight, X } from 'react-feather'
 import Logo from './Logo'
 
 import './Nav.css'
 
+TopBarProgress.config({
+  barColors: {
+    '0': 'red',
+    '0.2': 'orange',
+    '0.4': 'yellow',
+    '0.6': 'green',
+    '0.8': 'blue',
+    '1.0': '#272727'
+  },
+  shadowBlur: 5
+})
+
 export class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false
+    currentPath: false,
+    loading: true
   }
 
   componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname })
+    this.setState({ currentPath: this.props.location.pathname, loading: false})
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
@@ -44,6 +58,7 @@ export class Navigation extends Component {
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
+        {this.state.loading && <TopBarProgress />}
         <div className="Nav--Container container">
           <Link to="/" onClick={this.handleLinkClick}>
             <Logo />

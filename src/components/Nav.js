@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
+import { AlignRight, X } from 'react-feather'
 import Logo from './Logo'
 
 import './Nav.css'
@@ -90,7 +90,7 @@ export class Navigation extends Component {
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
           >
-            {active ? <X /> : <Menu />}
+            {active ? <X /> : <AlignRight />}
           </button>
         </div>
       </nav>

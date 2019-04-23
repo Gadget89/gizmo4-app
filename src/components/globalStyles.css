@@ -1,11 +1,11 @@
 :root {
-  --primary: #00c2bd;
+  --primary: #272727;
   --secondary: #000;
   --lightGrey: whitesmoke;
   --midGrey: #cacaca;
   --darkGrey: #272727;
   --danger: #ff3d3d;
-  --font-primary: 'Open Sans', sans-serif;
+  --font-primary: 'Exo 2', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  font-family: var(--font-system);
+  font-family: var(--font-primary);
   min-height: 100%;
   position: relative;
   background: white;

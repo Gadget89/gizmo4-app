@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 // import PropTypes from 'prop-types'
 // import { graphql } from 'gatsby'
-import Image from './Image'
+import Image from './CubeImage'
 
 // import _kebabCase from 'lodash/kebabCase'
 
@@ -30,48 +30,56 @@ export default class Cubes extends Component {
   render() {
     const { items } = this.props
     return (
-      <div className="container">
-        <div className="content clearfix">
-          {items.map(cube => {
-            return (
-              <div key={cube.id} className="cube-container">
-                <div className="photo-cube">
-                  <Link to={cube.link}>
-                    <div className="front">
-                      <h3 className="secondary-header">{cube.title}</h3>
-                      <Image resolutions="small" src={cube.frontImage} alt="" />
-                    </div>
-                  </Link>
-                  <Link to={cube.link}>
-                    <div className="back photo-desc">
-                      <h3
-                        style={{
-                          color: 'white'
-                        }}
-                      >
-                        {cube.title}
-                      </h3>
-                      <p
-                        style={{
-                          minHeight: '112px'
-                        }}
-                      >
-                        {cube.gist}
-                      </p>
-                      <span className="call-to-action">{cube.buttonText}</span>
-                    </div>
-                  </Link>
-                  <div className="left">
-                    <Image resolutions="small" src={cube.sideImage} alt="" />
+      <div className="content clearfix">
+        {items.map(cube => {
+          return (
+            <div key={cube.id} className="cube-container">
+              <div className="photo-cube">
+                <Link to={cube.link}>
+                  <div className="front photo-desc">
+                    <h3 className="secondary-header">{cube.title}</h3>
+                    <Image
+                      resolutions="small"
+                      src={cube.frontImage}
+                      alt=""
+                    />
                   </div>
-                  <div className="right">
-                    <Image resolutions="small" src={cube.backImage} alt="" />
+                </Link>
+                <Link to={cube.link}>
+                  <div className="back photo-desc">
+                    <h3 className="secondary-header">{cube.title}</h3>
+                    <p
+                      style={{
+                        margin: '42px 0',
+                        minHeight: '88px',
+                        lineHeight: '1.25'
+                      }}
+                    >
+                      {cube.gist}
+                    </p>
+                    <span className="call-to-action">
+                      {cube.buttonText}
+                    </span>
                   </div>
+                </Link>
+                <div className="left">
+                  <Image
+                    resolutions="small"
+                    src={cube.sideImage}
+                    alt=""
+                  />
+                </div>
+                <div className="right">
+                  <Image
+                    resolutions="small"
+                    src={cube.backImage}
+                    alt=""
+                  />
                 </div>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
       </div>
     )
   }

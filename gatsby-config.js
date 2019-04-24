@@ -49,6 +49,18 @@ module.exports = {
       }
     },
 
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Exo 2`,
+            variants: [`400`, `700`]
+          },
+        ],
+      }
+    },
+
     // Add static assets before markdown files
     {
       resolve: 'gatsby-source-filesystem',
@@ -80,6 +92,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
+              backgroundColor: '#272727',
               linkImagesToOriginal: false
             }
           },

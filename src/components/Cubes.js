@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link, graphql } from 'gatsby'
-// import Img from 'gatsby-image'
 // import PropTypes from 'prop-types'
-// import { graphql } from 'gatsby'
 import Image from './CubeImage'
 
 // import _kebabCase from 'lodash/kebabCase'

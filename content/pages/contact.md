@@ -1,27 +1,19 @@
 ---
 template: ContactPage
 slug: contact
-title: Contact Page
+title: CONNECT
 featuredImage: https://ucarecdn.com/a0c1c5b5-c910-4256-a9d3-dc094ca82f44/
-subtitle: This is the contact page subtitle.
+subtitle: Let's do something amazing.
 address: '404 James St, Burleigh Heads QLD 4220'
 phone: 0987 123 456
-email: example@example.com
+email: hello@nicolasroybal.com
 locations:
-  - lat: '-27.9654732'
-    lng: '153.2432449'
+  - lat: '35.085863'
+    lng: '106.656756'
     mapLink: ''
 meta:
-  description: This is a meta description.
-  title: Contact Page
+  description: Let's do something amazing.
+  title: CONNECT
 ---
 
-# Example contact form
-
-This form is setup to use Netlify's form handling:
-
-- the form action is set to the current absolute url: `action: '/contact/'`
-- a name attribute is sent with the form's data `'form-name': 'Contact'`
-- netlify data attributes are added to the form `data-netlify data-netlify-honeypot`
-
-Find out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).
+I know it can be tempting to whip out your parchment, quill, and ink to reach out but there are easier ways to connect. No, it's not smoke signals or carrier pigeons either. Just fill out this form!

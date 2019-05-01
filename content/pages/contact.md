@@ -1,6 +1,6 @@
 ---
 template: ContactPage
-slug: contact
+slug: connect
 title: CONNECT
 featuredImage: https://ucarecdn.com/a0c1c5b5-c910-4256-a9d3-dc094ca82f44/
 subtitle: Let's do something amazing.

@@ -9,11 +9,12 @@ import Cubes from '../components/Cubes'
 export const HomePageTemplate = ({ cubes, body }) => (
   <main>
     <section
-    style={{
-      padding: `25vh 0`,
-      minHeight: `calc(100vh - 12rem)`,
-    }}>
-      <Cubes items={cubes} />
+      style={{
+        padding: `25vh 0`,
+        minHeight: `calc(100vh - 12rem)`
+      }}
+    >
+      <Cubes component={cubes} />
       <Content source={body} />
     </section>
   </main>

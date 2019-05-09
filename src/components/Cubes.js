@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link, graphql } from 'gatsby'
 // import PropTypes from 'prop-types'
 import Image from './CubeImage'
@@ -24,23 +24,19 @@ export const query = graphql`
   }
 `
 
-export default class Cubes extends Component {
+export default class Cubes extends React.Component {
   render() {
-    const { items } = this.props
+    const { component } = this.props
     return (
       <div className="content clearfix">
-        {items.map(cube => {
+        {component.map(cube => {
           return (
             <div key={cube.id} className="cube-container">
               <div className="photo-cube">
                 <Link to={cube.link}>
                   <div className="front photo-desc">
                     <h3 className="secondary-header">{cube.title}</h3>
-                    <Image
-                      resolutions="small"
-                      src={cube.frontImage}
-                      alt=""
-                    />
+                    <Image resolutions="small" src={cube.frontImage} alt="" />
                   </div>
                 </Link>
                 <Link to={cube.link}>
@@ -55,24 +51,14 @@ export default class Cubes extends Component {
                     >
                       {cube.gist}
                     </p>
-                    <span className="call-to-action">
-                      {cube.buttonText}
-                    </span>
+                    <span className="call-to-action">{cube.buttonText}</span>
                   </div>
                 </Link>
                 <div className="left">
-                  <Image
-                    resolutions="small"
-                    src={cube.sideImage}
-                    alt=""
-                  />
+                  <Image resolutions="small" src={cube.sideImage} alt="" />
                 </div>
                 <div className="right">
-                  <Image
-                    resolutions="small"
-                    src={cube.backImage}
-                    alt=""
-                  />
+                  <Image resolutions="small" src={cube.backImage} alt="" />
                 </div>
               </div>
             </div>

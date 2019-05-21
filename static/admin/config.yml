@@ -212,22 +212,22 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: text }
               - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: text }
-              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Gist, name: gist, widget: string }
+              - { label: Button Text, name: buttonText, widget: string }
               - { label: Front Image, name: frontImage, widget: image }
               - { label: Side Image, name: sideImage, widget: image }
               - { label: Back Image, name: backImage, widget: image }
-              - { label: Title, name: title, widget: text }
+              - { label: Title, name: title, widget: string }
               - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: text }
-              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Gist, name: gist, widget: string }
+              - { label: Button Text, name: buttonText, widget: string }
               - { label: Front Image, name: frontImage, widget: image }
               - { label: Side Image, name: sideImage, widget: image }
               - { label: Back Image, name: backImage, widget: image }
-              - { label: Title, name: title, widget: text }
+              - { label: Title, name: title, widget: string }
               - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: text }
-              - { label: Button Text, name: buttonText, widget: text }
+              - { label: Gist, name: gist, widget: string }
+              - { label: Button Text, name: buttonText, widget: string }
               - { label: Front Image, name: frontImage, widget: image }
               - { label: Side Image, name: sideImage, widget: image }
               - { label: Back Image, name: backImage, widget: image }

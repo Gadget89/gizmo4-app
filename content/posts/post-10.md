@@ -3,6 +3,8 @@ template: SinglePost
 title: Cat
 status: Published
 date: '2018-03-28'
+gist: Cute warriors of death.
+buttonText: MEOW
 featuredImage: >-
   https://ucarecdn.com/69bcae44-f555-4b56-b08e-bd0f2013654a/-/crop/1634x1690/0,434/-/preview/
 excerpt: This is an excerpt of Post Two

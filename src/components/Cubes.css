@@ -17,56 +17,55 @@ h4 {
 
 /* ---- Layout Containers ---- */
 
-
 .content {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .secondary-header {
-    color: #ffff;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-    position: absolute;
-    /* margin: 10px; */
-    z-index: 50;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.2rem;
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  /* margin: 10px; */
+  z-index: 50;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.2rem;
 }
 .cube-container {
-    max-width: 200px;
-    margin: 0 auto 4.5em;
+  max-width: 200px;
+  margin: 0 auto 4.5em;
 }
 /* ---- Page Elements ---- */
 .call-to-action {
-    font-size: 0.8em;
-    color: #fff;
-    width: fit-content;
-    line-height: 1.15;
-    font-weight: normal;
-    display: block;
-    text-decoration: none;
-    text-align: right;
-    text-transform: uppercase;
-    padding: 4px 6px;
-    margin: 0 0 0 auto;
+  font-size: 0.8em;
+  color: #fff;
+  width: fit-content;
+  line-height: 1.15;
+  font-weight: normal;
+  display: block;
+  text-decoration: none;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 4px 6px;
+  margin: 0 0 0 auto;
 }
 .call-to-action:hover {
-    border: solid 1px white;
-    border-radius: 14px;
+  border: solid 1px white;
+  border-radius: 14px;
 }
 /* ---- Photo Overlay ---- */
 
 .photo-desc {
-    color: #fff;
-    padding: 10px;
-    /* background: rgba(0,0,0,.88); */
-    background-color: #272727;
+  color: #fff;
+  padding: 10px;
+  /* background: rgba(0,0,0,.88); */
+  background-color: #272727;
 }
 /* ---- Float clearfix ---- */
 
 .clearfix::after {
-    content: ' ';
-    display: table;
-    clear: both;
+  content: ' ';
+  display: table;
+  clear: both;
 }
 
 /* ================================= 
@@ -74,93 +73,89 @@ h4 {
 ==================================== */
 
 .cube-container {
-    box-shadow: 0 18px 40px 5px rgba(0, 0, 0, 0.4);
-    perspective: 800px;
+  box-shadow: 0 18px 40px 5px rgba(0, 0, 0, 0.4);
+  perspective: 800px;
 }
 
 .photo-cube {
-    transition: transform 2s ease-in-out;
-    width: 220px;
-    height: 220px;
-    transform-style: preserve-3d;
+  transition: transform 2s ease-in-out;
+  width: 220px;
+  height: 220px;
+  transform-style: preserve-3d;
 }
 
 .photo-cube:hover {
-    transform: rotateY(-270deg);
+  transform: rotateY(-270deg);
 }
 
 .front,
 .back,
 .left,
 .right {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
 }
 
 .front {
-    transform: translate3d(0, 0, 110px);
+  transform: translate3d(0, 0, 110px);
 }
 
 .back {
-    transform: translateZ(-110px) rotateY(270deg);
-    transform-origin: center left;
+  transform: translateZ(-110px) rotateY(270deg);
+  transform-origin: center left;
 }
 
 .left {
-    transform: rotateY(-270deg) translate3d(110px, 0, 0);
-    transform-origin: top right;
+  transform: rotateY(-270deg) translate3d(110px, 0, 0);
+  transform-origin: top right;
 }
 
 .right {
-    transform: translateZ(-110px) rotateY(180deg);
+  transform: translateZ(-110px) rotateY(180deg);
 }
 .zoom-img {
-    max-width: 100%;
-  
+  max-width: 100%;
+
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .zoom-img:hover {
-    -moz-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.075);
 }
-
 
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
-    .cube-container {
-        float: left;
-        margin-left: 16.6%;
-    }
-    .centerWrapper {
-        width: 50%;
-    }
-    .contentContainer {
-        margin-top: 36vh;
-    }
+  .cube-container {
+    float: left;
+    margin-left: 16.6%;
+  }
+  .centerWrapper {
+    width: 50%;
+  }
+  .contentContainer {
+    margin-top: 36vh;
+  }
 }
 @media (min-width: 1025px) {
-    .cube-container:first-child {
-        margin-left: 0;
-    }
-    .cube-container:last-child {
-        align-content: center;
-    }
-    .content {
-        max-width: 900px;
-        margin: auto;
-    }
-    /* .container {
-        padding-top: 33vh;
-    } */
+  /* .cube-container:first-child {
+    margin-left: 0;
+  }
+  .cube-container:last-child {
+    align-content: center;
+  } */
+  .content {
+    max-width: 900px;
+    margin: auto;
+  }
 }
 /* @media (max-width: 320px) {
 

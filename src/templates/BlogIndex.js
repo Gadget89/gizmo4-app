@@ -78,8 +78,8 @@ export const BlogIndexTemplate = ({
           )}
 
           {!!posts.length && (
-            <section className="section">
-              <div className="container">
+            <section className="">
+              <div className="">
                 <PostSection posts={filteredPosts} />
               </div>
             </section>
@@ -149,6 +149,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
+            gist
+            buttonText
             categories {
               category
             }

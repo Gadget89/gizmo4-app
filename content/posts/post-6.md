@@ -3,6 +3,8 @@ template: SinglePost
 title: Man
 status: Published
 date: '2018-05-25'
+gist: Cool or not cool?
+buttonText: Find out
 featuredImage: 'https://ucarecdn.com/bd5d1edc-73be-488a-9d50-8ec28f5ab6a9/'
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words

@@ -3,6 +3,8 @@ template: SinglePost
 title: Chairs
 status: Featured / Published
 date: '2018-03-27'
+gist: Trustworthy or foe?
+buttonText: FIND OUT
 featuredImage: >-
   https://ucarecdn.com/f540281a-41cf-4bfa-8181-b172e2655fba/-/crop/1632x1777/0,672/-/preview/
 excerpt: >-
@@ -18,18 +20,18 @@ meta:
   noindex: false
   title: test meta title
 ---
+
 Paragraphs are separated by a blank line.
 
 ![Test Image](https://ucarecdn.com/ac9898a0-413a-467b-95fa-0a9959c30710/)
-
 
 The second paragraph. This is placeholder text that our web designers put here to make sure words appear properly on your website. _Italic_, **bold**, and `monospace`.
 
 ### Unordered lists:
 
-* this one
-* that one
-* the other one
+- this one
+- that one
+- the other one
 
 ### Ordered lists:
 

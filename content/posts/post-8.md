@@ -3,6 +3,8 @@ template: SinglePost
 title: River
 status: Published
 date: '2018-05-25'
+gist: The mystery continues.
+buttonText: GO FISHING
 featuredImage: >-
   https://ucarecdn.com/d6ad4f3e-40a1-49cf-8cf0-f06a25d08544/-/crop/1690x1484/0,882/-/preview/
 excerpt: >-

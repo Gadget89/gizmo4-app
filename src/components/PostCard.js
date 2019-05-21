@@ -43,7 +43,7 @@ const PostCard = ({
   excerpt,
   slug,
   gist,
-  butttonText,
+  buttonText,
   frontImage,
   sideImage,
   backImage,
@@ -53,7 +53,7 @@ const PostCard = ({
     <div className="photo-cube">
       <Link to={slug}>
         <div className="front photo-desc">
-          {title && <h3>{title}</h3>}
+          {title && <h3 className="secondary-header">{title}</h3>}
           <Image resolutions="small" src={featuredImage} alt="" />
         </div>
       </Link>
@@ -71,13 +71,13 @@ const PostCard = ({
               {gist}
             </p>
           )}
-          {butttonText && <span>{butttonText}</span>}
+          {buttonText && <span className="call-to-action">{buttonText}</span>}
         </div>
       </Link>
       <div className="left">
         <Image resolutions="small" src={featuredImage} alt="" />
       </div>
-      <div>
+      <div className="right">
         <Image resolutions="small" src={featuredImage} alt="" />
       </div>
     </div>

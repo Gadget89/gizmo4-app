@@ -2,12 +2,12 @@ import React from 'react'
 
 import PostCard from '../components/PostCard'
 import './PostSection.css'
+import './Cubes.css'
 
 class PostSection extends React.Component {
   static defaultProps = {
     posts: [],
-    title: '',
-    limit: 12,
+    limit: 6,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
     perPageLimit: 12
@@ -23,15 +23,14 @@ class PostSection extends React.Component {
     }))
 
   render() {
-    const { posts, title, showLoadMore, loadMoreTitle } = this.props,
+    const { posts, showLoadMore, loadMoreTitle } = this.props,
       { limit } = this.state,
       visiblePosts = posts.slice(0, limit || posts.length)
 
     return (
       <div className="PostSection">
-        {title && <h2 className="PostSection--Title">{title}</h2>}
         {!!visiblePosts.length && (
-          <div className="PostSection--Grid">
+          <div className="clearfix" style={{ width: '84%' }}>
             {visiblePosts.map((post, index) => (
               <PostCard key={post.title + index} {...post} />
             ))}

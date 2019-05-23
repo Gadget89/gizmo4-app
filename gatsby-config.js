@@ -56,8 +56,8 @@ module.exports = {
           {
             family: `Exo 2`,
             variants: [`400`, `700`]
-          },
-        ],
+          }
+        ]
       }
     },
 
@@ -80,7 +80,6 @@ module.exports = {
     // images
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-
     {
       resolve: 'gatsby-transformer-remark',
       options: {

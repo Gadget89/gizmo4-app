@@ -3,6 +3,9 @@ import { navigate } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
+// To-Do:
+// [ ] Return text "No results found" when there is no results to display
+
 export default ({ pageCount }) => {
   return (
     <Location>

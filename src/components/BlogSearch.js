@@ -5,6 +5,7 @@ import qs from 'qs'
 
 // To-Do:
 // [ ] Return text "No results found" when there is no results to display
+// [ ] Add search exit button and functionality.
 
 export default ({ pageCount }) => {
   return (

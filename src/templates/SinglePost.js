@@ -6,23 +6,31 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import PageHeader from '../components/PageHeader'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
   title,
   date,
+  featuredImage,
+  subtitle,
   body,
   nextPostURL,
   prevPostURL,
   categories = []
 }) => (
   <main>
+    <PageHeader
+      title={title}
+      subtitle={subtitle}
+      backgroundImage={featuredImage}
+    />
     <article
       className="SinglePost section light"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
-      <div className="container skinny">
+      <div className="">
         <Link className="SinglePost--BackButton" to="/blog/">
           <ChevronLeft /> BACK
         </Link>
@@ -122,6 +130,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         template
+        featuredImage
         subtitle
         date
         categories {

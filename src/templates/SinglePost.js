@@ -20,12 +20,7 @@ export const SinglePostTemplate = ({
   categories = []
 }) => (
   <main>
-    <PageHeader
-      title={title}
-      subtitle={gist}
-      date={date}
-      backgroundImage={featuredImage}
-    />
+    <PageHeader title={title} subtitle={gist} backgroundImage={featuredImage} />
     <article
       className="SinglePost section light"
       itemScope
@@ -33,20 +28,10 @@ export const SinglePostTemplate = ({
     >
       <div className="">
         <div className="SinglePost--Content relative">
-          <div className="SinglePost--Meta">
-            {/* Remove time frame from this section and relocate to cube template front section. */}
-            {date && (
-              <time
-                className="SinglePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {_format(date, 'MMMM Do, YYYY')}
-              </time>
-            )}
+          <div className="SinglePost--Title">
             {categories && (
               <Fragment>
-                <span>|</span>
+                <span> | </span>
                 {categories.map((cat, index) => (
                   <span
                     key={cat.category}
@@ -61,11 +46,14 @@ export const SinglePostTemplate = ({
             )}
           </div>
 
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              {title}
-            </h1>
-          )}
+          <div className="SinglePost--Title">
+            {/* Remove time frame from this section and relocate to cube template front section. */}
+            {date && (
+              <time itemProp="dateCreated pubdate datePublished" date={date}>
+                {_format(date, 'MMMM Do, YYYY')}
+              </time>
+            )}
+          </div>
 
           <div className="SinglePost--InnerContent">
             <Content source={body} />

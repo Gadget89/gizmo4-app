@@ -34,6 +34,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Image from './CubeImage'
+import _format from 'date-fns/format'
 
 import './Cubes.css'
 
@@ -42,6 +43,7 @@ const PostCard = ({
   title,
   excerpt,
   slug,
+  date,
   gist,
   buttonText,
   frontImage,
@@ -54,6 +56,15 @@ const PostCard = ({
       <Link to={slug}>
         <div className="front photo-desc">
           {title && <h3 className="secondary-header">{title}</h3>}
+          {date && (
+            <time
+              itemProp="dateCreated pubdate datePublished"
+              className="publish-date"
+              date={date}
+            >
+              {_format(date, 'MMMM Do, YYYY')}
+            </time>
+          )}
           <Image resolutions="small" src={featuredImage} alt="" />
         </div>
       </Link>

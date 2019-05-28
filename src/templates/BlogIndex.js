@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
-import PageHeader from '../components/PageHeader'
+// import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
@@ -37,8 +37,6 @@ export const byCategory = (posts, title, contentType) => {
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
   title,
-  subtitle,
-  featuredImage,
   posts = [],
   postCategories = [],
   enableSearch = true,
@@ -63,14 +61,21 @@ export const BlogIndexTemplate = ({
 
       return (
         <main className="Blog">
-          <PageHeader
-            title={title}
-            subtitle={subtitle}
-            backgroundImage={featuredImage}
-          />
+          {!!title && (
+            <h1
+              style={{
+                textTransform: 'uppercase',
+                width: '90vw',
+                margin: '0 auto',
+                paddingTop: '1em'
+              }}
+            >
+              {title}
+            </h1>
+          )}
 
           {!!postCategories.length && (
-            <section className="section thin">
+            <section className="section">
               <div className="container">
                 <PostCategoriesNav enableSearch categories={postCategories} />
               </div>
@@ -131,8 +136,6 @@ export const pageQuery = graphql`
         title
         excerpt
         template
-        subtitle
-        featuredImage
       }
     }
 

@@ -136,7 +136,8 @@ h4 {
 @media (min-width: 769px) {
   .cube-container {
     float: left;
-    margin-left: 16.6%;
+    /* margin-left: 16.6%; */
+    margin-left: 14vw;
   }
   .centerWrapper {
     width: 50%;
@@ -152,10 +153,10 @@ h4 {
   .cube-container:last-child {
     align-content: center;
   } */
-  .content {
+  /* .content {
     max-width: 900px;
     margin: auto;
-  }
+  } */
 }
 /* @media (max-width: 320px) {
 

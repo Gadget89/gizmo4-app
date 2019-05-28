@@ -1,4 +1,5 @@
 import React from 'react'
+import _format from 'date-fns/format'
 import PropTypes from 'prop-types'
 
 import Image from './Image'
@@ -8,6 +9,7 @@ import './PageHeader.css'
 const PageHeader = ({
   title,
   subtitle,
+  date,
   backgroundImage,
   large,
   className = ''
@@ -29,6 +31,7 @@ const PageHeader = ({
         {subtitle && (
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
+        {date && <time date={date}>{_format(date, 'MMMM Do, YYYY')}</time>}
       </div>
     </div>
   )

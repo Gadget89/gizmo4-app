@@ -1,6 +1,11 @@
 .SinglePost {
-  background: var(--lightGrey);
+  /* background: var(--lightGrey); */
+  background-color: white;
 }
+
+/* .SinglePost--InnerContent {
+  padding: 0px 22rem;
+} */
 
 .SinglePost--BackButton {
   background-color: white;
@@ -40,7 +45,7 @@
 .SinglePost--Meta {
   font-size: 1rem;
   margin: 0 0 2rem 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .SinglePost--Meta > * + * {
@@ -48,12 +53,12 @@
 }
 
 .SinglePost--Title {
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.2;
 }
 
 .SinglePost--InnerContent {
-  padding: 0 8rem;
+  padding: 0 22rem;
 }
 
 @media screen and (max-width: 750px) {

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
+// import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -13,7 +13,7 @@ export const SinglePostTemplate = ({
   title,
   date,
   featuredImage,
-  subtitle,
+  gist,
   body,
   nextPostURL,
   prevPostURL,
@@ -22,7 +22,8 @@ export const SinglePostTemplate = ({
   <main>
     <PageHeader
       title={title}
-      subtitle={subtitle}
+      subtitle={gist}
+      date={date}
       backgroundImage={featuredImage}
     />
     <article
@@ -31,11 +32,9 @@ export const SinglePostTemplate = ({
       itemType="http://schema.org/BlogPosting"
     >
       <div className="">
-        <Link className="SinglePost--BackButton" to="/blog/">
-          <ChevronLeft /> BACK
-        </Link>
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Meta">
+            {/* Remove time frame from this section and relocate to cube template front section. */}
             {date && (
               <time
                 className="SinglePost--Meta--Date"
@@ -131,7 +130,7 @@ export const pageQuery = graphql`
         title
         template
         featuredImage
-        subtitle
+        gist
         date
         categories {
           category

@@ -51,6 +51,7 @@
   border: 1px solid #bababa;
   padding: 1.5rem 2rem;
   border-radius: var(--borderRadius);
+  /* border-radius: 2em; */
   line-height: 1.25em;
   transition: border-color 0.2s;
   resize: none;

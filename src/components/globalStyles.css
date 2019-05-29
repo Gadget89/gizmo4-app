@@ -7,7 +7,7 @@
   --danger: #ff3d3d;
   --font-primary: 'Exo 2', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
-  --borderRadius: 3px;
+  --borderRadius: 2em;
 }
 
 ::-webkit-scrollbar {

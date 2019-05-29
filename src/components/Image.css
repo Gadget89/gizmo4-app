@@ -38,8 +38,9 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.zoom-img:hover {
+/* Disabling hover event for cube images. Causes bug on mobile browsers. May try moving the hover event into media query for large screens only. */
+/* .zoom-img:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.075);
-}
+} */

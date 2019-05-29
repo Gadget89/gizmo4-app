@@ -9,11 +9,11 @@
   overflow: hidden;
 }
 
-.PostCard:hover,
+/* .PostCard:hover,
 .PostCard:focus {
   transform: translateY(-1px);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .PostCard--Image {
   margin: 0 0 2rem 0;

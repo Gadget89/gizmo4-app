@@ -82,7 +82,9 @@ const PostCard = ({
               {gist}
             </p>
           )}
-          {buttonText && <span className="call-to-action">{buttonText}</span>}
+          {buttonText && (
+            <button className="call-to-action">{buttonText}</button>
+          )}
         </div>
       </Link>
       <div className="left">

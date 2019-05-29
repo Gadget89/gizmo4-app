@@ -39,21 +39,23 @@ export default class Cubes extends React.Component {
                     <Image resolutions="small" src={cube.frontImage} alt="" />
                   </div>
                 </Link>
-                <Link to={cube.link}>
-                  <div className="back photo-desc">
-                    <h3 className="secondary-header">{cube.title}</h3>
-                    <p
-                      style={{
-                        margin: '42px 0',
-                        minHeight: '88px',
-                        lineHeight: '1.25'
-                      }}
-                    >
-                      {cube.gist}
-                    </p>
-                    <span className="call-to-action">{cube.buttonText}</span>
-                  </div>
-                </Link>
+                <div className="back photo-desc">
+                  <h3 className="secondary-header">{cube.title}</h3>
+                  <p
+                    style={{
+                      margin: '42px 0',
+                      minHeight: '88px',
+                      lineHeight: '1.25'
+                    }}
+                  >
+                    {cube.gist}
+                  </p>
+                  <Link to={cube.link}>
+                    <button className="call-to-action">
+                      {cube.buttonText}
+                    </button>
+                  </Link>
+                </div>
                 <div className="left">
                   <Image resolutions="small" src={cube.sideImage} alt="" />
                 </div>

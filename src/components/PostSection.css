@@ -17,11 +17,11 @@
   cursor: pointer;
 } */
 
-.PostSection button:hover {
+/* .PostSection button:hover {
   background: black;
   border: 2px solid white;
   color: white;
-}
+} */
 
 .PostSection--Grid > * {
   width: calc(33.33% - 2rem);

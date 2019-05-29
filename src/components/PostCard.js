@@ -68,15 +68,17 @@ const PostCard = ({
           <Image resolutions="small" src={featuredImage} alt="" />
         </div>
       </Link>
-      <Link to={slug}>
-        <div className="back photo-desc">
+
+      <div className="back photo-desc">
+        <Link to={slug}>
           {title && <h3 className="secondary-header">{title}</h3>}
           {gist && (
             <p
               style={{
                 margin: '42px 0',
                 minHeight: '88px',
-                lineHeight: '1.25'
+                lineHeight: '1.25',
+                color: 'white'
               }}
             >
               {gist}
@@ -85,8 +87,9 @@ const PostCard = ({
           {buttonText && (
             <button className="call-to-action">{buttonText}</button>
           )}
-        </div>
-      </Link>
+        </Link>
+      </div>
+
       <div className="left">
         <Image resolutions="small" src={featuredImage} alt="" />
       </div>

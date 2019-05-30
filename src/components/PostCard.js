@@ -56,15 +56,18 @@ const PostCard = ({
       <Link to={slug}>
         <div className="front photo-desc">
           {title && <h3 className="secondary-header">{title}</h3>}
-          {date && (
-            <time
-              itemProp="dateCreated pubdate datePublished"
-              className="publish-date"
-              date={date}
-            >
-              {_format(date, 'MMMM Do, YYYY')}
-            </time>
-          )}
+          <div className="date-wrapper">
+            <span className="publish-date">PUBLISHED: </span>
+            {date && (
+              <time
+                itemProp="dateCreated pubdate datePublished"
+                className="publish-date"
+                date={date}
+              >
+                {_format(date, 'MM.DD.YYYY')}
+              </time>
+            )}
+          </div>
           <Image resolutions="small" src={featuredImage} alt="" />
         </div>
       </Link>

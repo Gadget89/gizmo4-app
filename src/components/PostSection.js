@@ -30,7 +30,7 @@ class PostSection extends React.Component {
     return (
       <div className="PostSection">
         {!!visiblePosts.length && (
-          <div className="clearfix" style={{ width: '84%' }}>
+          <div className="clearfix">
             {visiblePosts.map((post, index) => (
               <PostCard key={post.title + index} {...post} />
             ))}

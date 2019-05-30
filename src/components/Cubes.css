@@ -31,7 +31,8 @@ h4 {
   font-size: 2.2rem;
 }
 .cube-container {
-  max-width: 200px;
+  /* max-width: 200px; */
+  max-width: 220px;
   margin: 0 auto 4.5em;
 }
 /* ---- Page Elements ---- */
@@ -50,10 +51,17 @@ h4 {
   margin: 0 0 0 auto;
   /* border: solid 1px white; */
   border-radius: var(--borderRadius);
-  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1); */
+  cursor: pointer;
 }
 
-.publish-date {
+.call-to-action:hover {
+  color: var(--primary);
+  background: #fff;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45); */
+}
+
+.date-wrapper {
   font-size: 0.8em;
   color: #ffff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
@@ -65,7 +73,25 @@ h4 {
   text-align: right;
   text-transform: uppercase;
   padding: 4px 6px;
-  margin: 174px 0 0 auto;
+  margin: 160px 0 0 auto;
+  position: relative;
+  z-index: 50;
+}
+
+.publish-date {
+  font-size: 1em;
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  width: fit-content;
+  line-height: 1.15;
+  font-weight: normal;
+  display: block;
+  text-decoration: none;
+  text-align: right;
+  text-transform: uppercase;
+  /* padding: 4px 6px; */
+  /* margin: 174px 0 0 auto; */
+  margin: 0 auto;
   position: relative;
   z-index: 50;
 }
@@ -155,7 +181,8 @@ h4 {
   .cube-container {
     float: left;
     /* margin-left: 16.6%; */
-    margin-left: 14vw;
+    /* margin-left: 14vw; */
+    margin-left: 8vw;
   }
   .centerWrapper {
     width: 50%;

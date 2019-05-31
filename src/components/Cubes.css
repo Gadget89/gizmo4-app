@@ -55,11 +55,12 @@ h4 {
   cursor: pointer;
 }
 
-.call-to-action:hover {
+/* .call-to-action:hover {
   color: var(--primary);
   background: #fff;
-  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45); */
-}
+  text-decoration: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+} */
 
 .date-wrapper {
   font-size: 0.8em;

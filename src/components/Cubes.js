@@ -40,17 +40,19 @@ export default class Cubes extends React.Component {
                   </div>
                 </Link>
                 <div className="back photo-desc">
-                  <h3 className="secondary-header">{cube.title}</h3>
-                  <p
-                    style={{
-                      margin: '42px 0',
-                      minHeight: '88px',
-                      lineHeight: '1.25'
-                    }}
-                  >
-                    {cube.gist}
-                  </p>
                   <Link to={cube.link}>
+                    <h3 className="secondary-header">{cube.title}</h3>
+                    <p
+                      style={{
+                        margin: '42px 0 33px',
+                        minHeight: '88px',
+                        lineHeight: '1.25',
+                        color: 'white'
+                      }}
+                    >
+                      {cube.gist}
+                    </p>
+
                     <button className="call-to-action">
                       {cube.buttonText}
                     </button>

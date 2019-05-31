@@ -78,7 +78,7 @@ const PostCard = ({
           {gist && (
             <p
               style={{
-                margin: '42px 0',
+                margin: '42px 0 33px',
                 minHeight: '88px',
                 lineHeight: '1.25',
                 color: 'white'

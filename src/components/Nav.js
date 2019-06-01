@@ -9,10 +9,10 @@ import './Nav.css'
 
 TopBarProgress.config({
   barColors: {
-    '0': 'red',
-    '0.2': 'orange',
-    '0.4': 'yellow',
-    '0.6': 'green',
+    '0': '#272727',
+    '0.5': 'white',
+    '0.6': 'yellow',
+    '0.7': 'red',
     '0.8': 'blue',
     '1.0': '#272727'
   },
@@ -28,7 +28,7 @@ export class Navigation extends Component {
   }
 
   componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname, loading: false})
+    this.setState({ currentPath: this.props.location.pathname, loading: false })
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 

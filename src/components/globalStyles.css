@@ -26,6 +26,7 @@
 
 ::selection {
   background: rgba(0, 194, 189, 0.6);
+  /* TO-DO: CHANGE HIGHLIGT COLORS */
 }
 
 html {
@@ -156,7 +157,7 @@ blockquote {
 
 .section {
   width: 100%;
-  padding: 5rem 0;
+  padding: 2rem 0;
   /* border-bottom: 1px solid #f1f1f1; */
 }
 .section:last-child {
@@ -175,7 +176,7 @@ blockquote {
 @media (max-width: 600px) {
   .section {
     width: 100%;
-    padding: 5rem 0;
+    padding: 2rem 0 0;
   }
   .section.thick {
     padding: 7rem 0;
@@ -204,7 +205,7 @@ blockquote {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.05em;
   font-size: 1.4rem;
   display: inline-block;

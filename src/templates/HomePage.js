@@ -4,16 +4,12 @@ import { graphql } from 'gatsby'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Cubes from '../components/Cubes'
+import './HomePage.css'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ cubes, body }) => (
   <main>
-    <section
-      style={{
-        padding: `25vh 0`,
-        minHeight: `calc(100vh - 12rem)`
-      }}
-    >
+    <section className="centerWrapper">
       <Cubes component={cubes} />
       <Content source={body} />
     </section>

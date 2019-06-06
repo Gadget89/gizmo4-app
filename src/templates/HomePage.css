@@ -1,0 +1,10 @@
+.centerWrapper {
+  padding: 25vh 0;
+  min-height: calc(100vh - 12rem);
+}
+
+@media (max-width: 600px) {
+  .centerWrapper {
+    padding: 2rem 0;
+  }
+}

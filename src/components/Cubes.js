@@ -28,12 +28,7 @@ export default class Cubes extends React.Component {
   render() {
     const { component } = this.props
     return (
-      <div
-        className="content clearfix"
-        style={{
-          width: '78vw'
-        }}
-      >
+      <div className="content">
         {component.map(cube => {
           return (
             <div key={cube.id} className="cube-container">

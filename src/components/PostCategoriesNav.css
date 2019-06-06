@@ -29,6 +29,29 @@
   color: black;
 }
 
+.PostCategoriesTabs {
+  min-width: 8rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom-color 0.2s;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  border-bottom-color: transparent;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.PostCategoriesTabs:hover,
+.PostCategoriesTabs.active,
+.PostCategoriesTabs:focus {
+  text-decoration: underline;
+  color: white;
+  background: #262626;
+}
+
 @media (max-width: 600px) {
   .PostCategoriesNav input[type='text'] {
     position: relative;

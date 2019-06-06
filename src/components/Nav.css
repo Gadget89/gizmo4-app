@@ -36,6 +36,7 @@
 }
 
 .NavLink {
+  min-width: 8rem;
   padding: 0.5rem 1rem;
   display: block;
   font-weight: 500;
@@ -49,8 +50,9 @@
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
-  color: var(--primary);
-  border-bottom-color: currentColor;
+  text-decoration: underline;
+  /* color: var(--primary); */
+  /* border-bottom-color: currentColor; */
 }
 
 .Nav--Group {
@@ -106,86 +108,86 @@
 }
 
 /* @media (max-width: 600px) { */
-  .Nav--Container {
-    display: flex;
-  }
+.Nav--Container {
+  display: flex;
+}
 
-  .Nav--MenuButton {
-    display: block !important;
-    margin-left: auto;
-    z-index: 1;
-  }
-  .Nav .Logo {
-    z-index: 1;
-  }
+.Nav--MenuButton {
+  display: block !important;
+  margin-left: auto;
+  z-index: 1;
+}
+.Nav .Logo {
+  z-index: 1;
+}
 
-  .Nav--Links {
-    display: none;
-    align-items: flex-end;
-    flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background: white;
-    animation: Nav--Links 0.2s ease;
-  }
+.Nav--Links {
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: white;
+  animation: Nav--Links 0.2s ease;
+}
 
-  .Nav--Links > * + * {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
+.Nav--Links > * + * {
+  margin-left: 0;
+  margin-top: 1rem;
+}
 
-  .Nav-active .Nav--Links {
-    display: flex;
-  }
+.Nav-active .Nav--Links {
+  display: flex;
+}
 
-  .Nav-active .NavLink {
-    animation: Nav--Link 0.3s ease-out;
-    animation-fill-mode: both;
-  }
+.Nav-active .NavLink {
+  animation: Nav--Link 0.3s ease-out;
+  animation-fill-mode: both;
+}
 
-  .Nav .NavLink {
-    font-size: 2.5rem;
-    font-weight: 300;
-  }
+.Nav .NavLink {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
 
-  .Nav .NavLink:nth-of-type(2) {
-    animation-delay: 0.1s;
-  }
-  .Nav .NavLink:nth-of-type(3) {
-    animation-delay: 0.2s;
-  }
-  .Nav .NavLink:nth-of-type(4) {
-    animation-delay: 0.3s;
-  }
-  .Nav .NavLink:nth-of-type(5) {
-    animation-delay: 0.4s;
-  }
-  .Nav .NavLink:nth-of-type(6) {
-    animation-delay: 0.5s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
-  .Nav .NavLink:nth-of-type(8) {
-    animation-delay: 0.7s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
+.Nav .NavLink:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.Nav .NavLink:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.Nav .NavLink:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.Nav .NavLink:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+.Nav .NavLink:nth-of-type(6) {
+  animation-delay: 0.5s;
+}
+.Nav .NavLink:nth-of-type(7) {
+  animation-delay: 0.6s;
+}
+.Nav .NavLink:nth-of-type(8) {
+  animation-delay: 0.7s;
+}
+.Nav .NavLink:nth-of-type(7) {
+  animation-delay: 0.6s;
+}
 
-  .Nav--GroupLinks {
-    position: relative;
-    justify-content: flex-end;
-    text-align: center;
-  }
+.Nav--GroupLinks {
+  position: relative;
+  justify-content: flex-end;
+  text-align: center;
+}
 
-  .Nav--GroupLinks .NavLink {
-    font-size: 1.5rem;
-    width: auto;
-  }
+.Nav--GroupLinks .NavLink {
+  font-size: 1.5rem;
+  width: auto;
+}
 /* } */
 
 @keyframes Nav--Link {

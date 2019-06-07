@@ -52,10 +52,29 @@
   background: #262626;
 }
 
-@media (max-width: 600px) {
-  .PostCategoriesNav input[type='text'] {
-    position: relative;
-    width: 100%;
-    margin: 2rem 0;
+.searchBoxContainer {
+  width: 90vw;
+  margin: 0;
+}
+
+.searchBoxIcon {
+  position: absolute;
+  right: 1rem;
+  /* margin: 2rem 0; */
+  margin-top: 2.5rem;
+}
+
+.PostCategoriesNav input[type='text'] {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+  .searchBoxContainer {
+    position: absolute;
+    width: 30vw;
+    right: 0;
+    margin: 0;
   }
 }

@@ -1,6 +1,8 @@
 .Content--Image,
 .Content img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 90vw;
+  overflow: hidden;
   display: block;
   height: auto;
   margin-bottom: 2.5rem;

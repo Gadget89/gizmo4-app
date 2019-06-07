@@ -29,6 +29,11 @@ export const SinglePostTemplate = ({
       <div className="">
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Title">
+            {date && (
+              <time itemProp="dateCreated pubdate datePublished" date={date}>
+                {_format(date, 'MM.DD.YYYY')}
+              </time>
+            )}
             {categories && (
               <Fragment>
                 <span> | </span>
@@ -45,15 +50,7 @@ export const SinglePostTemplate = ({
               </Fragment>
             )}
           </div>
-
-          <div className="SinglePost--Title">
-            {/* Remove time frame from this section and relocate to cube template front section. */}
-            {date && (
-              <time itemProp="dateCreated pubdate datePublished" date={date}>
-                {_format(date, 'MMMM Do, YYYY')}
-              </time>
-            )}
-          </div>
+          <div className="SinglePost--Title" />
 
           <div className="SinglePost--InnerContent">
             <Content source={body} />

@@ -2,6 +2,8 @@ import React from 'react'
 import _format from 'date-fns/format'
 import PropTypes from 'prop-types'
 
+import { Navigation2 } from 'react-feather'
+
 import Image from './Image'
 import Content from './Content'
 import './PageHeader.css'
@@ -11,6 +13,7 @@ const PageHeader = ({
   subtitle,
   date,
   backgroundImage,
+  catagories,
   large,
   className = ''
 }) => {
@@ -31,7 +34,28 @@ const PageHeader = ({
         {subtitle && (
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
-        {date && <time date={date}>{_format(date, 'MMMM Do, YYYY')}</time>}
+        {date && (
+          <div>
+            <p>4 MIN READ</p>
+            <p
+              style={{
+                margin: 0,
+                textTransform: 'uppercase'
+              }}
+            >
+              published
+            </p>
+            <time date={date}>{_format(date, 'MM.DD.YY')}</time>
+          </div>
+        )}
+        <Navigation2
+          style={{
+            margin: '5rem 0',
+            width: '90vw',
+            textAlign: 'center',
+            transform: 'rotate(180deg)'
+          }}
+        />
       </div>
     </div>
   )

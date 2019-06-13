@@ -36,6 +36,7 @@ const PageHeader = ({
         )}
         {date && (
           <div>
+            {/* Add icons next to fields in hero image section. */}
             <p>4 MIN READ</p>
             <p
               style={{

@@ -20,7 +20,12 @@ export const SinglePostTemplate = ({
   categories = []
 }) => (
   <main>
-    <PageHeader title={title} subtitle={gist} backgroundImage={featuredImage} />
+    <PageHeader
+      title={title}
+      subtitle={gist}
+      backgroundImage={featuredImage}
+      date={date}
+    />
     <article
       className="SinglePost section light"
       itemScope

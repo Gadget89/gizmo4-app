@@ -2,7 +2,7 @@ import React from 'react'
 import _format from 'date-fns/format'
 import PropTypes from 'prop-types'
 
-import { Navigation2, Clock, Edit } from 'react-feather'
+import { Navigation2, Clock, Edit2 } from 'react-feather'
 
 import Image from './Image'
 import Content from './Content'
@@ -36,17 +36,23 @@ const PageHeader = ({
         )}
         {date && (
           <div>
-            {/* Add icons next to fields in hero image section. */}
             <div>
               <Clock className="PageHeader--Icon" />
-              <span className="PageHeader--Icon--Text">4 MIN READ</span>
+              <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+                lenth:
+              </span>
             </div>
             <div>
-              <Edit className="PageHeader--Icon" />
-              <span className="PageHeader--Icon--Text">published:</span>
+              <span className="PageHeader-Sub-Text">4 MIN READ</span>
             </div>
             <div>
-              <span className="PageHeader-Date">
+              <Edit2 className="PageHeader--Icon" />
+              <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+                published:
+              </span>
+            </div>
+            <div>
+              <span className="PageHeader-Sub-Text">
                 <time date={date}>{_format(date, 'MM.DD.YY')}</time>
               </span>
             </div>

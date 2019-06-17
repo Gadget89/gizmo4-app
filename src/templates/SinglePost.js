@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 // import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
-// import { ChevronLeft } from 'react-feather'
+import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -54,25 +54,36 @@ export const SinglePostTemplate = ({
 
           <div className="SinglePost--InnerContent">
             <Content source={body} />
-          </div>
-
-          <div className="SinglePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
+            <div className="SinglePost--Pagination">
+              {prevPostURL && (
+                <Link
+                  className="SinglePost--Pagination--Link prev"
+                  to={prevPostURL}
+                >
+                  <ArrowLeftCircle
+                    style={{
+                      marginRight: '1rem',
+                      verticalAlign: 'bottom'
+                    }}
+                  />
+                  Previous Post
+                </Link>
+              )}
+              {nextPostURL && (
+                <Link
+                  className="SinglePost--Pagination--Link next"
+                  to={nextPostURL}
+                >
+                  Next Post
+                  <ArrowRightCircle
+                    style={{
+                      marginLeft: '1rem',
+                      verticalAlign: 'bottom'
+                    }}
+                  />
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import _get from 'lodash/get'
-import _format from 'date-fns/format'
+// import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
 // import { ChevronLeft } from 'react-feather'
 
@@ -34,11 +34,6 @@ export const SinglePostTemplate = ({
       <div className="">
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Title">
-            {date && (
-              <time itemProp="dateCreated pubdate datePublished" date={date}>
-                {_format(date, 'MM.DD.YYYY')}
-              </time>
-            )}
             {categories && (
               <Fragment>
                 <span> | </span>

@@ -2,7 +2,7 @@ import React from 'react'
 import _format from 'date-fns/format'
 import PropTypes from 'prop-types'
 
-import { Navigation2, Clock, Edit2 } from 'react-feather'
+import { ArrowDownCircle, Clock, Edit2 } from 'react-feather'
 
 import Image from './Image'
 import Content from './Content'
@@ -35,17 +35,17 @@ const PageHeader = ({
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
         {date && (
-          <div>
+          <div className="PageHeader--Info-Wrapper">
             <div>
               <Clock className="PageHeader--Icon" />
               <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
                 lenth:
               </span>
             </div>
-            <div>
+            <div style={{ position: 'absolute' }}>
               <span className="PageHeader-Sub-Text">4 MIN READ</span>
             </div>
-            <div>
+            <div style={{ marginTop: '1rem' }}>
               <Edit2 className="PageHeader--Icon" />
               <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
                 published:
@@ -56,16 +56,14 @@ const PageHeader = ({
                 <time date={date}>{_format(date, 'MM.DD.YY')}</time>
               </span>
             </div>
+            <ArrowDownCircle
+              style={{
+                width: '90vw',
+                textAlign: 'center'
+              }}
+            />
           </div>
         )}
-        <Navigation2
-          style={{
-            margin: '2rem 0',
-            width: '90vw',
-            textAlign: 'center',
-            transform: 'rotate(180deg)'
-          }}
-        />
       </div>
     </div>
   )

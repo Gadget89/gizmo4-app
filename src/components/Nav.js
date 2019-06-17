@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import TopBarProgress from 'react-topbar-progress-indicator'
-import { AlignRight, X } from 'react-feather'
+import { BarChart2, X } from 'react-feather'
 import Logo from './Logo'
 
 import './Nav.css'
@@ -108,7 +108,11 @@ export class Navigation extends Component {
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
           >
-            {active ? <X /> : <AlignRight />}
+            {active ? (
+              <X />
+            ) : (
+              <BarChart2 style={{ transform: 'rotate(270deg)' }} />
+            )}
           </button>
         </div>
       </nav>

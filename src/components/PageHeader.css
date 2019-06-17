@@ -2,6 +2,7 @@
   background-color: var(--darkGrey);
   color: white;
   /* padding: 15rem 0; */
+  height: 50vh;
 }
 
 .PageHeader .BackgroundImage {
@@ -15,23 +16,39 @@
 .PageHeader--Title {
   font-size: 6rem;
   text-transform: uppercase;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
+  /* margin: 1rem 0 0; */
   color: white;
+  line-height: 4.5rem;
+  margin: 0;
+  padding-top: 2rem;
   /* -webkit-text-fill-color: transparent;  */
   /* Will override color (regardless of order) */
   /* -webkit-text-stroke-width: 3px; */
   /* -webkit-text-stroke-color: white; */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.45);
 }
 
 .PageHeader--Subtitle {
   font-weight: 400;
   font-size: 1.8rem;
   max-height: 38vw;
+  padding-top: 1rem;
 }
 
 .PageHeader .container {
   animation: fadeIn 0.5s ease-out;
+}
+
+.PageHeader--Info-Wrapper {
+  position: relative;
+  top: 18vh;
+}
+
+.PageHeader--Icon {
+  width: 2rem;
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .PageHeader--Icon--Text {
@@ -64,8 +81,5 @@
   .PageHeader--Title {
     font-size: 4rem;
     font-weight: 100;
-  }
-  .PageHeader--Subtitle {
-    min-height: 20vh;
   }
 }

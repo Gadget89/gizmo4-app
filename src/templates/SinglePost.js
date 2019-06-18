@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 // import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
-import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather'
+import { Tag, ArrowLeftCircle, ArrowRightCircle } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -33,26 +33,27 @@ export const SinglePostTemplate = ({
     >
       <div className="">
         <div className="SinglePost--Content relative">
-          <div className="SinglePost--Title">
-            {categories && (
-              <Fragment>
-                <span> | </span>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="SinglePost--Meta--Category"
-                  >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
-          </div>
-          <div className="SinglePost--Title" />
-
           <div className="SinglePost--InnerContent">
+            <div className="SinglePost--Title">
+              {categories && (
+                <Fragment>
+                  <span>
+                    <Tag />
+                    TAGS:{' '}
+                  </span>
+                  {categories.map((cat, index) => (
+                    <span
+                      key={cat.category}
+                      className="SinglePost--Meta--Category"
+                    >
+                      {cat.category}
+                      {/* Add a comma on all but last category */}
+                      {index !== categories.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </Fragment>
+              )}
+            </div>
             <Content source={body} />
             <div className="SinglePost--Pagination">
               {prevPostURL && (

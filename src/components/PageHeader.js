@@ -34,36 +34,36 @@ const PageHeader = ({
         {subtitle && (
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
-        {date && (
-          <div className="PageHeader--Info-Wrapper">
-            <div>
-              <Clock className="PageHeader--Icon" />
-              <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
-                lenth:
-              </span>
-            </div>
-            <div style={{ position: 'absolute' }}>
-              <span className="PageHeader-Sub-Text">4 MIN READ</span>
-            </div>
-            <div style={{ marginTop: '1rem' }}>
-              <Edit2 className="PageHeader--Icon" />
-              <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
-                published:
-              </span>
-            </div>
+        <div className="PageHeader--Info-Wrapper">
+          <div>
+            <Clock className="PageHeader--Icon" />
+            <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+              lenth:
+            </span>
+          </div>
+          <div style={{ position: 'absolute' }}>
+            <span className="PageHeader-Sub-Text">4 MIN READ</span>
+          </div>
+          <div style={{ marginTop: '1rem' }}>
+            <Edit2 className="PageHeader--Icon" />
+            <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+              published:
+            </span>
+          </div>
+          {date && (
             <div>
               <span className="PageHeader-Sub-Text">
                 <time date={date}>{_format(date, 'MM.DD.YY')}</time>
               </span>
             </div>
-            <ArrowDownCircle
-              style={{
-                width: '90vw',
-                textAlign: 'center'
-              }}
-            />
-          </div>
-        )}
+          )}
+          <ArrowDownCircle
+            style={{
+              width: '90vw',
+              textAlign: 'center'
+            }}
+          />
+        </div>
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ title: Post Two
 status: Published
 date: '2018-03-28'
 gist: How much text fits in this cube?
+readTime: '4'
 buttonText: FIND OUT MORE
 featuredImage: 'https://ucarecdn.com/57002902-e8b3-4315-9995-beb637b29128/'
 excerpt: This is an excerpt of Post Two

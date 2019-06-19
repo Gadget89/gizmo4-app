@@ -76,14 +76,17 @@
   .PageHeader {
     height: 60vh;
   }
-  .PageHeader-large {
-    /* padding: 12.5rem 0; */
-  }
   .Icon--DownArrow {
     top: -4rem;
   }
   .PageHeader--Title {
     font-size: 4rem;
     font-weight: 100;
+  }
+}
+
+@media (max-width: 340px) {
+  .PageHeader {
+    height: 78vh;
   }
 }

@@ -4,6 +4,7 @@ title: Red
 status: Featured / Published
 date: '2018-03-27'
 gist: One of three primary colors.
+readTime: '2'
 buttonText: CHECK IT OUT
 featuredImage: 'https://ucarecdn.com/94633346-778b-4474-8039-b18280ec73a3/'
 excerpt: >-

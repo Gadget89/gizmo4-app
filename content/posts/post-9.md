@@ -4,6 +4,7 @@ title: Sign
 status: Featured / Published
 date: '2018-03-27'
 gist: Tell it to the world.
+readTime: '4'
 buttonText: SAY SOMETHING
 featuredImage: 'https://ucarecdn.com/157877ea-a2cb-49b6-8130-768fbe1a60a7/'
 excerpt: >-

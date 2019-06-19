@@ -1,8 +1,7 @@
 .PageHeader {
   background-color: var(--darkGrey);
   color: white;
-  /* padding: 15rem 0; */
-  height: 50vh;
+  height: 53vh;
 }
 
 .PageHeader .BackgroundImage {
@@ -16,23 +15,17 @@
 .PageHeader--Title {
   font-size: 6rem;
   text-transform: uppercase;
-  /* margin-bottom: 0; */
-  /* margin: 1rem 0 0; */
   color: white;
   line-height: 4.5rem;
   margin: 0;
   padding-top: 2rem;
-  /* -webkit-text-fill-color: transparent;  */
-  /* Will override color (regardless of order) */
-  /* -webkit-text-stroke-width: 3px; */
-  /* -webkit-text-stroke-color: white; */
   text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.45);
 }
 
 .PageHeader--Subtitle {
   font-weight: 400;
   font-size: 1.8rem;
-  max-height: 38vw;
+  height: 24vh;
   padding-top: 1rem;
 }
 
@@ -42,7 +35,12 @@
 
 .PageHeader--Info-Wrapper {
   position: relative;
-  top: 18vh;
+  top: -2vh;
+}
+
+.PageHeader--Info-Item {
+  position: relative;
+  top: -2rem;
 }
 
 .PageHeader--Icon {
@@ -55,7 +53,6 @@
   vertical-align: top;
   margin-left: 0.75rem;
   text-transform: uppercase;
-  /* font-weight: bold; */
 }
 
 .PageHeader--Icon--Label {
@@ -63,20 +60,27 @@
 }
 
 .PageHeader-Sub-Text {
-  /* margin-left: calc(24px + 1rem); */
   position: relative;
   top: -2rem;
   left: 3rem;
-  /* font-weight: bold; */
+}
+
+.Icon--DownArrow {
+  position: relative;
+  top: -5rem;
+  width: 90vw;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
   .PageHeader {
-    /* padding: 7rem 0; */
-    height: 100vw;
+    height: 60vh;
   }
   .PageHeader-large {
-    padding: 12.5rem 0;
+    /* padding: 12.5rem 0; */
+  }
+  .Icon--DownArrow {
+    top: -4rem;
   }
   .PageHeader--Title {
     font-size: 4rem;

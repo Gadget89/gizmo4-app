@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import _get from 'lodash/get'
 // import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
-import { Tag, ArrowLeftCircle, ArrowRightCircle } from 'react-feather'
+import { ArrowLeftCircle, ArrowRightCircle } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -12,6 +12,7 @@ import './SinglePost.css'
 export const SinglePostTemplate = ({
   title,
   date,
+  readTime,
   featuredImage,
   gist,
   body,
@@ -25,6 +26,8 @@ export const SinglePostTemplate = ({
       subtitle={gist}
       backgroundImage={featuredImage}
       date={date}
+      readTime={readTime}
+      categories={categories}
     />
     <article
       className="SinglePost section light"
@@ -34,26 +37,6 @@ export const SinglePostTemplate = ({
       <div className="">
         <div className="SinglePost--Content relative">
           <div className="SinglePost--InnerContent">
-            <div className="SinglePost--Title">
-              {categories && (
-                <Fragment>
-                  <span>
-                    <Tag />
-                    TAGS:{' '}
-                  </span>
-                  {categories.map((cat, index) => (
-                    <span
-                      key={cat.category}
-                      className="SinglePost--Meta--Category"
-                    >
-                      {cat.category}
-                      {/* Add a comma on all but last category */}
-                      {index !== categories.length - 1 ? ',' : ''}
-                    </span>
-                  ))}
-                </Fragment>
-              )}
-            </div>
             <Content source={body} />
             <div className="SinglePost--Pagination">
               {prevPostURL && (
@@ -129,6 +112,7 @@ export const pageQuery = graphql`
         featuredImage
         gist
         date
+        readTime
         categories {
           category
         }

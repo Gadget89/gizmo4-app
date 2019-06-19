@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import _format from 'date-fns/format'
 import PropTypes from 'prop-types'
 
-import { ArrowDownCircle, Clock, Edit2 } from 'react-feather'
+import { ArrowDownCircle, Tag, Clock, Edit2 } from 'react-feather'
 
 import Image from './Image'
 import Content from './Content'
@@ -13,8 +13,9 @@ const PageHeader = ({
   subtitle,
   date,
   backgroundImage,
-  catagories,
+  categories,
   large,
+  readTime,
   className = ''
 }) => {
   if (large) className += ' PageHeader-large'
@@ -35,34 +36,68 @@ const PageHeader = ({
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
         <div className="PageHeader--Info-Wrapper">
-          <div>
-            <Clock className="PageHeader--Icon" />
-            <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
-              lenth:
-            </span>
-          </div>
-          <div style={{ position: 'absolute' }}>
-            <span className="PageHeader-Sub-Text">4 MIN READ</span>
-          </div>
-          <div style={{ marginTop: '1rem' }}>
-            <Edit2 className="PageHeader--Icon" />
-            <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
-              published:
-            </span>
-          </div>
           {date && (
-            <div>
+            <div className="">
+              <div style={{ marginTop: '1rem' }}>
+                <Edit2 className="PageHeader--Icon" />
+                <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+                  published:
+                </span>
+              </div>
               <span className="PageHeader-Sub-Text">
                 <time date={date}>{_format(date, 'MM.DD.YY')}</time>
               </span>
             </div>
           )}
-          <ArrowDownCircle
-            style={{
-              width: '90vw',
-              textAlign: 'center'
-            }}
-          />
+
+          {readTime && (
+            <div
+              className="PageHeader--Info-Item"
+              style={{
+                top: '-2rem'
+              }}
+            >
+              <div style={{ marginTop: '1rem' }}>
+                <Clock className="PageHeader--Icon" />
+                <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+                  lenth:
+                </span>
+              </div>
+              <span className="PageHeader-Sub-Text">{readTime} MIN READ</span>
+            </div>
+          )}
+
+          {categories && (
+            <div>
+              <Fragment>
+                <div
+                  className="PageHeader--Info-Item"
+                  style={{
+                    top: '-4rem'
+                  }}
+                >
+                  <div style={{ marginTop: '1rem' }}>
+                    <Tag
+                      className="PageHeader--Icon"
+                      style={{
+                        transform: 'rotate(90deg)'
+                      }}
+                    />
+                    <span className="PageHeader--Icon--Text PageHeader--Icon--Label">
+                      tags:
+                    </span>
+                  </div>
+                  {categories.map((cat, index) => (
+                    <span key={cat.category} className="PageHeader-Sub-Text">
+                      {cat.category}
+                      {index !== categories.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </div>
+              </Fragment>
+              <ArrowDownCircle className="Icon--DownArrow" />
+            </div>
+          )}
         </div>
       </div>
     </div>

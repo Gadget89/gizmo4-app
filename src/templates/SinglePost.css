@@ -83,7 +83,13 @@
   text-decoration: none;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
+  border: 0.5px solid #bababa;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.SinglePost--Pagination--Link:hover,
+.SinglePost--Pagination--Link:focus {
+  border: 1px solid var(--primary);
 }
 
 .SinglePost--Pagination--Link.next {

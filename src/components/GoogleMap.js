@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-import { Target } from 'react-feather'
+import { Coffee } from 'react-feather'
 
 let mapkey = ''
 if (process.env.NETLIFY_MAP_KEY) {
@@ -25,11 +25,7 @@ class GoogleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <Marker
-            lat={35.190363}
-            lng={-106.64772}
-            text={'Kreyser Avrora'}
-          />
+          <Marker lat={35.190363} lng={-106.64772} text={'Kreyser Avrora'} />
         </GoogleMapReact>
       </div>
     )
@@ -40,8 +36,8 @@ export default GoogleMap
 
 const Marker = () => {
   return (
-    <div style={{ color: 'blue' }}>
-      <Target />
+    <div>
+      <Coffee />
     </div>
   )
 }

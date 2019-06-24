@@ -63,7 +63,13 @@ export class Navigation extends Component {
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         {this.state.loading && <TopBarProgress />}
         <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick}>
+          <Link
+            to="/"
+            onClick={this.handleLinkClick}
+            style={{
+              textDecoration: 'none'
+            }}
+          >
             <Logo />
           </Link>
           <div className="Nav--Links">

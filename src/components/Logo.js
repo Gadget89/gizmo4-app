@@ -2,11 +2,20 @@ import React from 'react'
 import './Logo.css'
 
 export default () => (
-  // <div
-  //   className="Logo"
+  <div
+    className="Logo"
+    style={{
+      backgroundImage: `url(/images/logo.png)`
+    }}
+  />
+  // <h1
   //   style={{
-  //     backgroundImage: `url(/images/logo.png)`
+  //     fontSize: '4rem',
+  //     fontWeight: '500',
+  //     textTransform: 'uppercase',
+  //     margin: '0'
   //   }}
-  // />
-  <h1>curio gadget</h1>
+  // >
+  //   nicolas roybal
+  // </h1>
 )

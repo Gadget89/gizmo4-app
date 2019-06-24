@@ -55,7 +55,7 @@ module.exports = {
         fonts: [
           {
             family: `Exo 2`,
-            variants: [`400`, `700`]
+            variants: [`100`, `200`, `300`, `400`, `500`, `700`]
           }
         ]
       }

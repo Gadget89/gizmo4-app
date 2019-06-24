@@ -8,6 +8,7 @@
   --font-primary: 'Exo 2', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 2em;
+  --boxShadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
 
 ::-webkit-scrollbar {

@@ -66,7 +66,9 @@ export const BlogIndexTemplate = ({
               style={{
                 textTransform: 'uppercase',
                 width: '90vw',
-                margin: '0 auto'
+                margin: '0 auto',
+                fontWeight: '500',
+                fontSize: '3rem'
               }}
             >
               {title}

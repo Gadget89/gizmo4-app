@@ -34,5 +34,6 @@
 
   .Contact--Section1--Container > * {
     width: calc(50% - 2rem);
+    z-index: 0;
   }
 }

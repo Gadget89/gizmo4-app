@@ -48,16 +48,16 @@
   box-sizing: border-box;
   display: block;
   margin: 0;
-  border: 1px solid #bababa;
+  border: solid 0.5px #bababa;
   padding: 1.5rem 2rem;
   border-radius: var(--borderRadius);
-  /* border-radius: 2em; */
   line-height: 1.25em;
   transition: border-color 0.2s;
   resize: none;
   width: 100%;
   transition: 0.3s ease all;
   background: transparent;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .Form--InputText:valid,
@@ -73,8 +73,8 @@
 .Form--InputText:invalid:not(:empty) + span,
 .Form--InputText:active + span,
 .Form--InputText:focus + span {
-  top: 0;
-  left: 0.5rem;
+  top: 0.5rem;
+  left: 2rem;
   font-size: 1.2rem;
 }
 

@@ -30,6 +30,7 @@
   flex-wrap: wrap;
   position: relative;
   background: var(--white);
+  z-index: 1;
 }
 
 .Form--Label > span {
@@ -100,6 +101,7 @@
 }
 
 .Form--Input:-webkit-autofill {
+  box-shadow: var(--boxShadow);
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 

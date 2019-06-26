@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import BlogSearch from './BlogSearch'
 import './PostCategoriesNav.css'
 
-const PostCategoriesNav = ({ categories, enableSearch }) => (
+const PostCategoriesNav = ({ categories, enableSearch, location }) => (
   <div className="PostCategoriesNav">
     <Link className="PostCategoriesTabs" exact="true" to={`/blog/`}>
       All
@@ -27,54 +27,42 @@ const PostCategoriesNav = ({ categories, enableSearch }) => (
 export default PostCategoriesNav
 
 // import React from 'react'
-// import ChevronDown from 'react-feather/dist/icons/chevron-down'
-// import _kebabCase from 'lodash/kebabCase'
-// import './Accordion.css'
+// import { navigate } from 'gatsby'
+// import { Location } from '@reach/router'
+// import qs from 'qs'
+// import { Search } from 'react-feather'
+// import './PostCategoriesNav.css'
 
-// export default class Accordion extends React.Component {
-//   static defaultProps = {
-//     items: [],
-//     className: ''
-//   }
+// To-Do:
+// [ ] Return text "No results found" when there is no results to display
+// [ ] Add search exit button and functionality.
 
-//   state = {
-//     activeItem: null
-//   }
+// export default ({ pageContent }) => {
+//   return (
+//     <Location>
+//       {({ location }) => {
+//         let currentUrl = location
 
-//   handleClick = index => {
-//     this.setState({
-//       activeItem: this.state.activeItem === index ? null : index
-//     })
-//   }
+//         return (
+//           <div className="PostCategoriesNav">
+//     <Link className="PostCategoriesTabs" exact="true" to={`/blog/`}>
+//       All
+//     </Link>
+//     {categories.map((category, index) => (
+//       <Link
+//         exact="true"
+//         className="PostCategoriesTabs"
+//         key={category.title + index}
+//         to={category.slug}
+//       >
+//         {category.title}
+//       </Link>
+//     ))}
 
-//   render() {
-//     const { items, className } = this.props
-//     return (
-//       <div className={`Accordion ${className}`}>
-//         {!!items &&
-//           items.map((item, index) => (
-//             <div
-//               className={`Accordion--item ${
-//                 this.state.activeItem === index ? 'active' : ''
-//               }`}
-//               key={`accordion-item-${_kebabCase(item.title) + '-' + index}`}
-//               onClick={() => this.handleClick(index)}
-//             >
-//               <h2 className="flex">
-//                 <span>{item.title}</span>
-//                 <ChevronDown />
-//               </h2>
-//               <div className={'description'}>
-//                 {item.description} <br />
-//                 {item.link && (
-//                   <div href={item.link} className="button">
-//                     {item.linkTitle}
-//                   </div>
-//                 )}
-//               </div>
-//             </div>
-//           ))}
-//       </div>
-//     )
-//   }
+//     {enableSearch && <BlogSearch />}
+//   </div>
+//         )
+//       }}
+//     </Location>
+//   )
 // }

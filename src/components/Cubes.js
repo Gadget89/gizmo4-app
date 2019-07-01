@@ -33,12 +33,12 @@ export default class Cubes extends React.Component {
           return (
             <div key={cube.id} className="cube-container">
               <div className="photo-cube">
-                <Link to={cube.link}>
-                  <div className="front photo-desc">
+                <div className="front photo-desc">
+                  <Link to={cube.link}>
                     <h3 className="secondary-header">{cube.title}</h3>
                     <Image resolutions="small" src={cube.frontImage} alt="" />
-                  </div>
-                </Link>
+                  </Link>
+                </div>
                 <div className="back photo-desc">
                   <Link to={cube.link}>
                     <h3 className="secondary-header">{cube.title}</h3>

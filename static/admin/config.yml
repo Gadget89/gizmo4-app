@@ -111,7 +111,6 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - label: 'Meta'
             required: false
@@ -138,20 +137,20 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/componets.md'
-        label: 'Componets Page'
-        name: 'componets-page'
+      - file: 'content/pages/components.md'
+        label: 'Components Page'
+        name: 'components-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: ComponetsPage,
+              default: ComponentsPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'componets' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Images, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Section 1, name: section1, widget: markdown }
           - { label: Section 2, name: section2, widget: markdown }
           - label: 'accordion'
@@ -207,24 +206,10 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Body, name: body, widget: markdown }
           - label: 'Cubes'
             name: 'cubes'
-            widget: 'object'
+            widget: 'list'
             required: false
             fields:
               - { label: Title, name: title, widget: text }
-              - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: string }
-              - { label: Button Text, name: buttonText, widget: string }
-              - { label: Front Image, name: frontImage, widget: image }
-              - { label: Side Image, name: sideImage, widget: image }
-              - { label: Back Image, name: backImage, widget: image }
-              - { label: Title, name: title, widget: string }
-              - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: string }
-              - { label: Button Text, name: buttonText, widget: string }
-              - { label: Front Image, name: frontImage, widget: image }
-              - { label: Side Image, name: sideImage, widget: image }
-              - { label: Back Image, name: backImage, widget: image }
-              - { label: Title, name: title, widget: string }
               - { label: 'Link', name: 'link', widget: 'string' }
               - { label: Gist, name: gist, widget: string }
               - { label: Button Text, name: buttonText, widget: string }
@@ -304,12 +289,14 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: gist, widget: string }
       - label: 'Status'
         name: 'status'
         widget: 'select'
         options: ['Published', 'Featured', 'Draft']
         default: 'Published'
       - { label: Date / Order, name: date, widget: date }
+      - { label: Read Time, name: readTime, widget: string }
       - {
           label: Featured Image,
           name: featuredImage,

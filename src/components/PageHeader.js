@@ -31,7 +31,7 @@ const PageHeader = ({
         />
       )}
       <div className="container relative">
-        <h1 className="PageHeader--Title">{title}</h1>
+        {title && <h1 className="PageHeader--Title">{title}</h1>}
         {subtitle && (
           <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
@@ -87,6 +87,7 @@ const PageHeader = ({
                       tags:
                     </span>
                   </div>
+
                   {categories.map((cat, index) => (
                     <span key={cat.category} className="PageHeader-Sub-Text">
                       {cat.category}
@@ -94,8 +95,8 @@ const PageHeader = ({
                     </span>
                   ))}
                 </div>
+                <ArrowDownCircle className="Icon--DownArrow" />
               </Fragment>
-              <ArrowDownCircle className="Icon--DownArrow" />
             </div>
           )}
         </div>

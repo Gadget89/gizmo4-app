@@ -53,8 +53,8 @@ const PostCard = ({
 }) => (
   <div key={slug} className="cube-container">
     <div className="photo-cube">
-      <Link to={slug}>
-        <div className="front photo-desc">
+      <div className="front photo-desc">
+        <Link to={slug}>
           {title && <h3 className="secondary-header">{title}</h3>}
           <div className="date-wrapper">
             <span className="publish-date">PUBLISHED: </span>
@@ -69,8 +69,8 @@ const PostCard = ({
             )}
           </div>
           <Image resolutions="small" src={featuredImage} alt="" />
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className="back photo-desc">
         <Link to={slug}>

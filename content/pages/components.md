@@ -42,7 +42,7 @@ gallery:
     image: 'https://ucarecdn.com/83485d70-1552-4c97-b237-22330fb56a1e/'
     title: Yellow Ice Cream
 meta:
-  description: This is a meta description.
-  title: Components Page
+  description: Check out some of the projects I have worked on.
+  title: PORTFOLIO
 ---
 

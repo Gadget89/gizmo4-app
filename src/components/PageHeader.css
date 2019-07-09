@@ -81,7 +81,7 @@
   }
   .PageHeader--Title {
     font-size: 4rem;
-    font-weight: 100;
+    /* font-weight: 100; */
   }
 }
 

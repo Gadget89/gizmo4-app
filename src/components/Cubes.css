@@ -55,18 +55,18 @@ h4 {
   text-transform: uppercase;
   padding: 6px 12px;
   margin: 0 0 0 auto;
-  /* border: solid 1px white; */
+  border: solid 1px white;
   border-radius: var(--borderRadius);
   /* box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1); */
   cursor: pointer;
 }
 
-/* .call-to-action:hover {
+.call-to-action:hover {
   color: var(--primary);
   background: #fff;
-  text-decoration: none;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-} */
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
 
 .date-wrapper {
   font-size: 0.8em;
@@ -82,13 +82,13 @@ h4 {
   padding: 4px 6px;
   margin: 160px 0 0 auto;
   position: relative;
+  text-decoration-color: transparent;
   z-index: 50;
 }
 
 .publish-date {
   font-size: 1em;
   color: #ffff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
   width: fit-content;
   line-height: 1.15;
   font-weight: normal;
@@ -96,8 +96,11 @@ h4 {
   text-decoration: none;
   text-align: right;
   text-transform: uppercase;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45); */
   margin: 0 auto;
   position: relative;
+  /* text-decoration-color: transparent; */
+  /* -webkit-text-fill-color: rgba(0, 0, 0, 0.3); */
   z-index: 50;
 }
 

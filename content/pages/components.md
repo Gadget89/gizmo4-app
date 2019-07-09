@@ -1,20 +1,11 @@
 ---
 template: ComponentsPage
 slug: components
-featuredImage: 'https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/'
-subtitle: This is the components page subtitle.
-id: portfolio
-link: '/portfolio'
 title: Portfolio
-gist: Projects that speak for themselves.
-buttonText: Explore
-frontImage: https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/
-sideImage: https://ucarecdn.com/5da63204-4ff0-4235-aac3-852921d7c632/
-backImage: https://ucarecdn.com/83485d70-1552-4c97-b237-22330fb56a1e/
-
-section1:
-  ## This is a container component
-
+subtitle: This is the components page subtitle.
+featuredImage: >-
+  https://ucarecdn.com/7a503cca-b48b-434c-8dda-ed295f0ba9b3/-/crop/1732x2209/0,0/-/preview/
+section1: >-
   A sem vel nec sodales mi vivamus senectus sed potenti a parturient nascetur
   tincidunt nisi pulvinar rhoncus a. Risus imperdiet taciti suspendisse facilisi
   a per metus cubilia varius a nostra adipiscing amet ultrices quisque ac mi a.
@@ -31,8 +22,6 @@ section2: |-
   Hello world!
 
   ## Also background videos, with poster image support.
-# video: 'https://ucarecdn.com/e6979298-66d6-4245-b496-6e5a5d507135/'
-# videoPoster: 'https://ucarecdn.com/69ba14a8-6481-4671-abb6-0e6f0d9c3e46/'
 accordion:
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
@@ -53,6 +42,7 @@ gallery:
     image: 'https://ucarecdn.com/83485d70-1552-4c97-b237-22330fb56a1e/'
     title: Yellow Ice Cream
 meta:
-  description: This is a meta description.
-  title: Components Page
+  description: Check out some of the projects I have worked on.
+  title: PORTFOLIO
 ---
+

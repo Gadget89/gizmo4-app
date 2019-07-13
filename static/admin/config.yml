@@ -5,6 +5,7 @@ backend:
 
 # display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
 logo_url: https://ucarecdn.com/0cec4ed1-8a99-4abb-973a-239032a6c314/
+publish_mode: editorial_workflow
 media_library:
   name: uploadcare
   config:

@@ -26,7 +26,8 @@
 }
 
 ::selection {
-  background: rgba(0, 194, 189, 0.6);
+  background: var(--primary);
+  color: var(--lightGrey);
   /* TO-DO: CHANGE HIGHLIGT COLORS */
 }
 
@@ -50,8 +51,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+main {
+  min-height: calc(100vh - 13vh);
+}
+
 a {
   color: var(--primary);
+  text-decoration: none;
 }
 
 strong {
@@ -158,7 +164,7 @@ blockquote {
 
 .section {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2vh 0;
   /* border-bottom: 1px solid #f1f1f1; */
 }
 .section:last-child {
@@ -237,9 +243,30 @@ blockquote {
   justify-content: center;
 }
 
+/* Defaults */
+/* :root {
+  --color-scheme-background: pink;
+  --color-scheme-text-color: red;
+} */
+
+/* Light mode */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --color-scheme-background: white;
+    --color-scheme-text-color: black;
+  }
+} */
+
+/* Dark mode */
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --primary: white;
-    --lightGrey: black;
+    --color-scheme-background: black;
+    --color-scheme-text-color: white;
   }
+} */
+
+/* Usage */
+/* html {
+  background: var(--color-scheme-background);
+  color: var(--color-scheme-text-color);
 } */

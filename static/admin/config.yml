@@ -19,11 +19,155 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
-    label: 'Page'
+    label: 'Landing Pages'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
     files:
+      # Landing page content
+      - file: 'content/pages/home.md'
+        label: 'Home Page'
+        name: 'home-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HomePage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Cubes'
+            name: 'cubes'
+            widget: 'list'
+            required: false
+            fields:
+              - { label: Title, name: title, widget: text }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: Gist, name: gist, widget: string }
+              - { label: Button Text, name: buttonText, widget: string }
+              - { label: Front Image, name: frontImage, widget: image }
+              - { label: Side Image, name: sideImage, widget: image }
+              - { label: Back Image, name: backImage, widget: image }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+      # Blog page content
+      - file: 'content/pages/blog.md'
+        label: 'Blog Page'
+        name: 'blog-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: BlogIndex,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+      # Portfolio page content
+      - file: 'content/pages/components.md'
+        label: 'Components Page'
+        name: 'components-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: ComponentsPage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: 'componets' }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Section 1, name: section1, widget: markdown }
+          - { label: Section 2, name: section2, widget: markdown }
+          - label: 'accordion'
+            name: 'accordion'
+            widget: 'list'
+            fields:
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: string }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            fields:
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Alt, widget: string }
+              - { name: title, label: Title, widget: string, required: false }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
+      # Contact page content
       - file: 'content/pages/contact.md'
         label: 'Contact Page'
         name: 'contact-page'
@@ -100,148 +244,6 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/blog.md'
-        label: 'Blog Page'
-        name: 'blog-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: BlogIndex,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
-          - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
-      - file: 'content/pages/components.md'
-        label: 'Components Page'
-        name: 'components-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: ComponentsPage,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: 'componets' }
-          - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Section 1, name: section1, widget: markdown }
-          - { label: Section 2, name: section2, widget: markdown }
-          - label: 'accordion'
-            name: 'accordion'
-            widget: 'list'
-            fields:
-              - { name: title, label: title, widget: string, default: '' }
-              - { name: description, label: description, widget: string }
-          - label: 'Gallery'
-            name: 'gallery'
-            widget: 'list'
-            fields:
-              - { name: image, label: Image, widget: image }
-              - { name: alt, label: Alt, widget: string }
-              - { name: title, label: Title, widget: string, required: false }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
-      - file: 'content/pages/home.md'
-        label: 'Home Page'
-        name: 'home-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: HomePage,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: '' }
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-          - label: 'Cubes'
-            name: 'cubes'
-            widget: 'list'
-            required: false
-            fields:
-              - { label: Title, name: title, widget: text }
-              - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: Gist, name: gist, widget: string }
-              - { label: Button Text, name: buttonText, widget: string }
-              - { label: Front Image, name: frontImage, widget: image }
-              - { label: Side Image, name: sideImage, widget: image }
-              - { label: Back Image, name: backImage, widget: image }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
   - name: infoPages
     label: Info Page
     editor:
@@ -281,7 +283,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: posts
-    label: Post
+    label: Blog Posts
     editor:
       preview: true
     folder: content/posts
@@ -338,7 +340,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: postCategories
-    label: Post Category
+    label: Post Categories
     editor:
       preview: false
     folder: content/postCategories

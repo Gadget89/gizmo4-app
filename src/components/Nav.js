@@ -7,6 +7,8 @@ import Logo from './Logo'
 
 import './Nav.css'
 
+// TO-DO: Current iteration of nav is not accessible by tabbing. Redesign nav to pull list of nav landing links and add roles (i.e. role="tablist" role="tab") and id's.
+
 TopBarProgress.config({
   barColors: {
     '0': '#272727',

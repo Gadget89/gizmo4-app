@@ -52,7 +52,6 @@
 .NavLink:focus {
   text-decoration: underline;
   /* color: var(--primary); */
-  /* border-bottom-color: currentColor; */
 }
 
 .Nav--Group {

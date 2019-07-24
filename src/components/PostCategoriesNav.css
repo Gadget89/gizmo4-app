@@ -49,6 +49,7 @@
 .PostCategoriesTabs:focus {
   border-color: var(--primary);
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .searchBoxContainer {

@@ -206,26 +206,28 @@ blockquote {
 }
 
 /* Buttons */
+/* REFACTOR THIS CODE TO BE IMPLEMENTED ACCROSS APP FOR ALL BUTTONS */
 
 .Button {
-  background: var(--primary);
-  color: white;
+  background: white;
+  color: var(--primary);
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
   font-size: 1.4rem;
   display: inline-block;
   padding: 1.25rem 3rem;
-  border: none;
+  border: solid 1px var(--primary);
   transition: all 0.2s ease;
   cursor: pointer;
   border-radius: var(--borderRadius);
 }
 .Button:hover,
 .Button:focus {
-  opacity: 0.95;
-  outline: none;
+  border: solid 1px white;
+  color: white;
+  background-color: var(--primary);
 }
 .Button[disabled] {
   opacity: 0.4;

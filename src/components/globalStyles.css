@@ -207,6 +207,7 @@ blockquote {
 
 /* Buttons */
 /* REFACTOR THIS CODE TO BE IMPLEMENTED ACCROSS APP FOR ALL BUTTONS */
+/* Used in cubes.css and postcategoriesnav.css - Locate other places buttons are used in app. */
 
 .Button {
   background: white;

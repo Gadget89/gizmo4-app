@@ -35,6 +35,11 @@
   display: none !important;
 }
 
+/* Need to keep adding focus within drop down menu for alt navigation */
+.Nav--MenuButton:focus-within {
+  color: red;
+}
+
 .NavLink {
   min-width: 8rem;
   padding: 0.5rem 1rem;

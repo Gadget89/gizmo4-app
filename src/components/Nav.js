@@ -69,7 +69,8 @@ export class Navigation extends Component {
             to="/"
             onClick={this.handleLinkClick}
             style={{
-              textDecoration: 'none'
+              textDecoration: 'none',
+              border: 'none'
             }}
           >
             <Logo />

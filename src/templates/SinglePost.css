@@ -1,7 +1,6 @@
 /* Single Post Styles */
 
 a {
-  /* text-decoration: underline; */
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(
     to right,
@@ -14,10 +13,6 @@ a {
 }
 
 a:hover {
-  /* color: white;
-  background-color: var(--primary); */
-  /* border-bottom-style: solid 2px;
-  border-image: linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%; */
   border-bottom: 1.5px solid transparent;
   border-image: linear-gradient(
     to right,
@@ -30,13 +25,8 @@ a:hover {
 }
 
 .SinglePost {
-  /* background: var(--lightGrey); */
   background-color: white;
 }
-
-/* .SinglePost--InnerContent {
-  padding: 0px 22rem;
-} */
 
 .SinglePost--BackButton {
   background-color: white;
@@ -77,7 +67,6 @@ a:hover {
 .SinglePost--Meta {
   font-size: 1rem;
   margin: 0 0 2rem 0;
-  /* text-align: center; */
 }
 
 .SinglePost--Meta > * + * {
@@ -85,10 +74,8 @@ a:hover {
 }
 
 .SinglePost--Title {
-  /* text-align: center; */
   line-height: 1.2;
   margin: 0 auto 0.5em;
-  /* width: 58vw; */
 }
 
 .SinglePost--InnerContent {
@@ -102,7 +89,6 @@ a:hover {
 }
 
 .SinglePost--Pagination {
-  /* margin: 2rem 0; */
   padding-top: 4rem;
   display: flex;
   align-items: center;

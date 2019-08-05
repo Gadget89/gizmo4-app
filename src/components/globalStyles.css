@@ -7,10 +7,16 @@
   --danger: #ff3d3d;
   --font-primary: 'Exo 2', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
+  --buttonBorder: solid 0.5px #bababa;
   --borderRadius: 2em;
   --boxShadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
 
+/* Experimenting with focus outline for tab navigation */
+:focus {
+  -moz-outline-radius: 2rem;
+  outline: solid 1px var(--primary);
+}
 ::-webkit-scrollbar {
   width: 0.4rem;
 }

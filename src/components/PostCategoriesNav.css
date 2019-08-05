@@ -48,6 +48,7 @@
 .PostCategoriesTabs.active,
 .PostCategoriesTabs:focus {
   border-color: var(--primary);
+  border: solid 1px var(--primary);
   text-decoration: underline;
   font-weight: 600;
 }

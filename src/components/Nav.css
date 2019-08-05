@@ -37,7 +37,9 @@
 
 /* Need to keep adding focus within drop down menu for alt navigation */
 .Nav--MenuButton:focus-within {
-  color: red;
+  border: var(--buttonBorder);
+  border-radius: var(--borderRadius);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .NavLink {
@@ -48,15 +50,23 @@
   transition: color 0.2s, border-bottom-color 0.2s;
   color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid;
+  border-bottom: none;
   border-bottom-color: transparent;
 }
-
+/* Not working in Firefox */
 .NavLink:hover,
 .NavLink.active,
-.NavLink:focus {
-  text-decoration: underline;
-  /* color: var(--primary); */
+.NavLink:focus,
+.NavLink:focus-within {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    white 0%,
+    var(--primary) 10%,
+    var(--primary) 90%,
+    white 100%
+  );
+  border-image-slice: 1;
 }
 
 .Nav--Group {

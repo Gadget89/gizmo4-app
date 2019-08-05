@@ -118,9 +118,14 @@ export class Navigation extends Component {
             onClick={this.handleMenuToggle}
           >
             {active ? (
-              <X />
+              <X style={{ verticalAlign: 'middle' }} />
             ) : (
-              <BarChart2 style={{ transform: 'rotate(270deg)' }} />
+              <BarChart2
+                style={{
+                  transform: 'rotate(270deg)',
+                  verticalAlign: 'middle'
+                }}
+              />
             )}
           </button>
         </div>

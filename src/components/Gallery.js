@@ -9,6 +9,8 @@ import _kebabCase from 'lodash/kebabCase'
 import './Gallery.css'
 import 'react-photoswipe/lib/photoswipe.css'
 
+// To-Do: Limit amount of displayed images on page and display all in carosel on click of diplayed images
+
 export const query = graphql`
   fragment Gallery on MarkdownRemark {
     frontmatter {

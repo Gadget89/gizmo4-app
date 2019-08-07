@@ -52,7 +52,7 @@
 }
 
 /* Custom logo */
-
+/* To-Do: Scale down and reposition logo so it is not covered by log on button */
 .nc-githubAuthenticationPage-logo {
   background-image: url(/images/logo.svg);
   background-position: center;

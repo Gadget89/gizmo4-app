@@ -20,6 +20,7 @@
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.2rem;
+  line-height: 1;
 }
 .cube-container {
   max-width: 220px;
@@ -64,8 +65,8 @@
   text-decoration: none;
   text-align: right;
   text-transform: uppercase;
-  padding: 4px 6px;
-  margin: 160px 0 0 auto;
+  /* padding: 4px 6px; */
+  margin: 169px 0 0 auto;
   position: relative;
   text-decoration-color: transparent;
   z-index: 50;

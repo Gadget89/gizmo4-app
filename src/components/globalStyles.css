@@ -13,10 +13,10 @@
 }
 
 /* Experimenting with focus outline for tab navigation */
-:focus {
+/* :focus {
   -moz-outline-radius: 2rem;
   outline: solid 1px var(--primary);
-}
+} */
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
@@ -64,6 +64,7 @@ main {
 a {
   color: var(--primary);
   text-decoration: none;
+  /* box-sizing: inherit; */
 }
 
 strong {

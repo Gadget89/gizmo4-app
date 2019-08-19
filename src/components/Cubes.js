@@ -40,7 +40,14 @@ export default class Cubes extends React.Component {
                   </Link>
                 </div>
                 <div className="back photo-desc">
-                  <Link to={cube.link}>
+                  <Link
+                    to={cube.link}
+                    style={{
+                      border: 'none',
+                      borderImage: 'none',
+                      borderImageSlice: 'none'
+                    }}
+                  >
                     <h3 className="secondary-header">{cube.title}</h3>
                     <p
                       style={{

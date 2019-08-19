@@ -10,6 +10,13 @@
   margin-left: 1rem;
 }
 
+.PostCategoriesNav:focus {
+  border-color: var(--primary);
+  border: solid 1px var(--primary);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .PostCategoriesNav input[type='text'] {
   right: 0;
   position: absolute;
@@ -63,6 +70,13 @@
   right: 1rem;
   /* margin: 2rem 0; */
   margin-top: 2.5rem;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.searchBoxIcon:hover,
+.searchBoxIcon:focus {
+  transform: rotateY(-180deg);
 }
 
 .PostCategoriesNav input[type='text'] {

@@ -1,31 +1,27 @@
 /* Single Post Styles */
-
-a {
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(
-    to right,
-    white 0%,
-    var(--primary) 10%,
-    var(--primary) 90%,
-    white 100%
-  );
-  border-image-slice: 1;
-}
-
-a:hover {
-  border-bottom: 1.5px solid transparent;
-  border-image: linear-gradient(
-    to right,
-    white 0%,
-    var(--primary) 10%,
-    var(--primary) 90%,
-    white 100%
-  );
-  border-image-slice: 1;
-}
+/* CRITICLE ISSUE: Having the anchor tag fired from this CSS is towards the end of the cascade, thus causing undesired effect. Solution needs to have this target anchors within paragraph tags. Safari broser displaying styles unexpectedly. RESOURCE: https://developer.apple.com/library/archive/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html */
 
 .SinglePost {
   background-color: white;
+}
+
+.SinglePost p a {
+  padding-bottom: 1px;
+  background: linear-gradient(
+      to left,
+      white 0%,
+      var(--primary) 10%,
+      var(--primary) 90%,
+      white 100%
+    )
+    left bottom white no-repeat;
+  background-size: 100% 1px;
+}
+
+.SinglePost p a:hover,
+.SinglePost p a:focus {
+  padding-bottom: 1.5px;
+  background-size: 100% 1.5px;
 }
 
 .SinglePost--BackButton {

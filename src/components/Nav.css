@@ -44,7 +44,8 @@
 
 .NavLink {
   min-width: 8rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 1px;
+  /* padding-bottom: 1px; */
   display: block;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
@@ -58,7 +59,7 @@
 .NavLink.active,
 .NavLink:focus,
 .NavLink:focus-within {
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent;
   border-image: linear-gradient(
     to right,
     white 0%,
@@ -66,7 +67,17 @@
     var(--primary) 90%,
     white 100%
   );
-  border-image-slice: 1;
+  border-image-slice: 1; */
+  padding-bottom: 1.5px;
+  background: linear-gradient(
+      to left,
+      white 0%,
+      var(--primary) 10%,
+      var(--primary) 90%,
+      white 100%
+    )
+    left bottom white no-repeat;
+  background-size: 100% 1px;
 }
 
 .Nav--Group {

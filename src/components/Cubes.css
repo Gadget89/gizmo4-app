@@ -30,8 +30,8 @@
 /* ---- Page Elements ---- */
 .call-to-action {
   font-size: 0.8em;
-  background-color: var(--primary);
-  color: white;
+  background-color: white;
+  color: var(--primary);
   width: fit-content;
   line-height: 1.15;
   font-weight: 600;
@@ -48,10 +48,7 @@
 }
 
 .call-to-action:hover {
-  color: var(--primary);
-  background: #fff;
   text-decoration: underline;
-  text-decoration-color: #fff;
 }
 
 .date-wrapper {
@@ -96,7 +93,12 @@
   color: #fff;
   padding: 10px;
   /* background: rgba(0,0,0,.88); */
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-image: radial-gradient(
+    circle closest-side,
+    rgba(0, 0, 0, 0.88),
+    rgba(0, 0, 0, 0.98)
+  );
 }
 /* ---- Float clearfix ---- */
 
@@ -137,6 +139,7 @@
 .photo-cube:hover,
 .photo-cube:focus-within {
   transform: rotateY(-270deg);
+  cursor: none;
 }
 
 .front,

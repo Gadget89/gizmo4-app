@@ -30,7 +30,7 @@ export const SinglePostTemplate = ({
       categories={categories}
     />
     <article
-      className="SinglePost section light"
+      className="SinglePost section"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >

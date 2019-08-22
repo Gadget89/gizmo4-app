@@ -66,6 +66,8 @@
 }
 
 .searchBoxIcon {
+  /* color: var(--text-theme-color); */
+  color: var(--background-color);
   position: absolute;
   right: 1rem;
   /* margin: 2rem 0; */

@@ -1,9 +1,15 @@
 /* Single Post Styles */
 /* CRITICLE ISSUE: Having the anchor tag fired from this CSS is towards the end of the cascade, thus causing undesired effect. Solution needs to have this target anchors within paragraph tags. Safari broser displaying styles unexpectedly. RESOURCE: https://developer.apple.com/library/archive/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html */
 
-.SinglePost {
+/* .SinglePost.light {
   background-color: white;
+  color: var(--primary);
 }
+
+.SinglePost.dark {
+  background-color: var(--primary);
+  color: white;
+} */
 
 .SinglePost p a {
   padding-bottom: 1px;
@@ -48,11 +54,19 @@
   transform: translateX(-0.25em);
 }
 
-.SinglePost--Content {
-  background: white;
+/* .SinglePost--Content.light {
+  background-color: white;
+  color: var(--primary);
   padding: 0 8rem 2rem;
   box-shadow: var(--boxShadow);
-}
+} */
+
+/* .SinglePost--Content.dark {
+  background-color: var(--primary);
+  color: white;
+  padding: 0 8rem 2rem;
+  box-shadow: var(--boxShadow);
+} */
 
 @media screen and (max-width: 750px) {
   .SinglePost--Content {

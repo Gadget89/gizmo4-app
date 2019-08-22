@@ -1,5 +1,6 @@
 .Nav {
-  background: white;
+  /* background: white; */
+  background-color: var(--background-color);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -49,7 +50,8 @@
   display: block;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
-  color: inherit;
+  color: var(--text-theme-color);
+  /* color: var(--text-theme-color); */
   text-decoration: none;
   border-bottom: none;
   border-bottom-color: transparent;
@@ -68,15 +70,16 @@
     white 100%
   );
   border-image-slice: 1; */
+  color: var(--text-theme-color);
   padding-bottom: 1.5px;
   background: linear-gradient(
       to left,
-      white 0%,
-      var(--primary) 10%,
-      var(--primary) 90%,
-      white 100%
+      var(--background-color) 0%,
+      var(--text-theme-color) 10%,
+      var(--text-theme-color) 90%,
+      var(--background-color) 100%
     )
-    left bottom white no-repeat;
+    left bottom var(--background-color) no-repeat;
   background-size: 100% 1px;
 }
 
@@ -94,8 +97,8 @@
   position: absolute;
   top: calc(50% - 0.2rem);
   right: 1rem;
-  border-bottom: 2px solid var(--darkGrey);
-  border-right: 2px solid var(--darkGrey);
+  border-bottom: 2px solid var(--text-theme-color);
+  border-right: 2px solid var(--text-theme-color);
   display: block;
   height: 0.8rem;
   width: 0.8rem;
@@ -108,7 +111,7 @@
   /* top: 100%; */
   left: 0;
   width: auto;
-  background: white;
+  background-color: var(--background-color);
   /* opacity: 0; */
   max-height: 0;
   overflow: hidden;
@@ -124,6 +127,7 @@
 .Nav--Group.active .Nav--GroupParent::after {
   top: calc(50% + 0.2rem);
   transform: translateY(-50%) rotate(-135deg);
+  color: red;
 }
 
 .Nav--GroupLink {
@@ -155,7 +159,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: white;
+  background-color: var(--background-color);
   animation: Nav--Links 0.2s ease;
 }
 

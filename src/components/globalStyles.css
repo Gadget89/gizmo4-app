@@ -11,6 +11,20 @@
   --borderRadius: 2em;
   --boxShadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
+body.light {
+  --background-color: white;
+  --text-theme-color: var(--primary);
+}
+/* Dark theme */
+body.dark,
+body.dark nav {
+  --background-color: var(--primary);
+  --text-theme-color: white;
+}
+/* 
+body.dark svg {
+  color: white;
+} */
 
 /* Experimenting with focus outline for tab navigation */
 /* :focus {
@@ -48,8 +62,8 @@ body {
   font-family: var(--font-primary);
   min-height: 100%;
   position: relative;
-  background: white;
-  color: var(--secondary);
+  background: var(--background-color);
+  color: var(--text-theme-color);
   font-size: 1.6em;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -62,7 +76,7 @@ main {
 }
 
 a {
-  color: var(--primary);
+  color: var(--text-theme-color);
   text-decoration: none;
   /* box-sizing: inherit; */
 }
@@ -123,11 +137,12 @@ blockquote {
 
 /* Utility Classes */
 .light {
-  background-color: var(--lightGrey);
-}
-.white {
   background-color: white;
+  color: var(--primary);
 }
+/* .white {
+  background-color: white;
+} */
 .dark {
   background-color: var(--primary);
   color: white;

@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
+    'gatsby-plugin-dark-mode',
 
     {
       resolve: 'gatsby-plugin-offline',

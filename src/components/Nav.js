@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import TopBarProgress from 'react-topbar-progress-indicator'
 import { BarChart2, X } from 'react-feather'
 import Logo from './Logo'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 import './Nav.css'
 
@@ -112,6 +113,20 @@ export class Navigation extends Component {
             </div>
             <NavLink to="/default/">Default</NavLink>
             <NavLink to="/connect/">Connect</NavLink>
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={e =>
+                      toggleTheme(e.target.checked ? 'dark' : 'light')
+                    }
+                    checked={theme === 'dark'}
+                  />{' '}
+                  Dark mode
+                </label>
+              )}
+            </ThemeToggler>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

@@ -97,7 +97,7 @@
     padding: 0;
   }
 }
-
+/* TO-DO: Fix hover events and styling for dark mode. */
 .SinglePost--Pagination {
   padding-top: 4rem;
   display: flex;

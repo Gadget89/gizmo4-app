@@ -46,9 +46,10 @@
   font-family: inherit;
   flex-grow: 1;
   box-sizing: border-box;
+  color: var(--text-theme-color);
   display: block;
   margin: 0;
-  border: solid 0.5px #bababa;
+  border: solid 0.5px var(--text-theme-color);
   padding: 1.5rem 2rem;
   border-radius: var(--borderRadius);
   line-height: 1.25em;
@@ -107,12 +108,7 @@
 
 .Form--Input:focus {
   outline: none;
-  border-color: black;
-}
-
-.Form--Input:focus {
-  outline: none;
-  border-color: black;
+  border-color: var(--text-theme-color);
 }
 
 .Form--Input[disabled],

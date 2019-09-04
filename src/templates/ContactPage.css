@@ -14,7 +14,7 @@
 
 .Contact--Details--Item svg {
   margin-right: 1.5rem;
-  color: var(--primary);
+  color: var(--text-theme-color);
 }
 
 @media (min-width: 750px) {

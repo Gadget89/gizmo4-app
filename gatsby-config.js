@@ -38,14 +38,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'nicolas-roybal-web-app',
-        short_name: 'nr-app',
+        name: 'Nicolas Roybal Portfolio',
+        short_name: 'Portfolio',
         start_url: '/',
         background_color: '#272727',
         theme_color: '#272727',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: 'standalone',
+        // display: 'standalone',
+        display: 'browser',
         icon: `${__dirname}/static/images/logo.png` // This path is relative to the root of the site.
       }
     },
@@ -128,7 +129,7 @@ module.exports = {
         // Setting a color is optional.
         color: 'blue',
         // Disable the loading spinner.
-        showSpinner: false
+        showSpinner: true
       }
     },
     'gatsby-plugin-sitemap',

@@ -113,20 +113,23 @@ export class Navigation extends Component {
             </div>
             <NavLink to="/default/">Default</NavLink>
             <NavLink to="/connect/">Connect</NavLink>
-            <ThemeToggler>
-              {({ theme, toggleTheme }) => (
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={e =>
-                      toggleTheme(e.target.checked ? 'dark' : 'light')
-                    }
-                    checked={theme === 'dark'}
-                  />{' '}
-                  Dark mode
-                </label>
-              )}
-            </ThemeToggler>
+            {/* To-Do: Add container and styling to push theme toggle, privacy policy link and copyright to bottom of drop down nav */}
+            <div style={{ marginTop: '33vh' }}>
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <label>
+                    <input
+                      type="checkbox"
+                      onChange={e =>
+                        toggleTheme(e.target.checked ? 'dark' : 'light')
+                      }
+                      checked={theme === 'dark'}
+                    />{' '}
+                    Dark Theme
+                  </label>
+                )}
+              </ThemeToggler>
+            </div>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

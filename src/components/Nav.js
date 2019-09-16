@@ -78,7 +78,7 @@ export class Navigation extends Component {
           </Link>
           <div className="Nav--Links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/components/">Components</NavLink>
+            <NavLink to="/components/">Portfolio</NavLink>
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
@@ -111,7 +111,6 @@ export class Navigation extends Component {
                 ))}
               </div>
             </div>
-            <NavLink to="/default/">Default</NavLink>
             <NavLink to="/connect/">Connect</NavLink>
             {/* To-Do: Add container and styling to push theme toggle, privacy policy link and copyright to bottom of drop down nav */}
             <div style={{ marginTop: '33vh' }}>

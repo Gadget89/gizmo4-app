@@ -16,6 +16,7 @@ body.light {
   --text-theme-color: var(--primary);
 }
 /* Dark theme */
+/* Dark theme design will change to total black background for top and bottom nav */
 body.dark,
 body.dark nav {
   --background-color: var(--primary);
@@ -140,9 +141,7 @@ blockquote {
   background-color: white;
   color: var(--primary);
 }
-/* .white {
-  background-color: white;
-} */
+
 .dark {
   background-color: var(--primary);
   color: white;

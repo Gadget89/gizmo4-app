@@ -6,6 +6,8 @@ import AlertTriangle from 'react-feather/dist/icons/alert-triangle'
 
 import Layout from '../components/Layout'
 
+// TO-DO: Fix styling to render icon proper size
+
 export default ({ children }) => (
   <StaticQuery
     query={graphql`

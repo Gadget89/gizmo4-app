@@ -5,6 +5,8 @@ import Image from './CubeImage'
 
 // import _kebabCase from 'lodash/kebabCase'
 
+//  TO-DO: Implement this component for landing page
+
 import './Cubes.css'
 
 export const query = graphql`

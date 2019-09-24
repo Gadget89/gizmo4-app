@@ -3,6 +3,8 @@ import Image from '../components/Image'
 
 import './InstagramFeed.css'
 
+// THIS CONTENT IS NOT BEING USED AND WILL BE DELETED PRIOR TO DEPLOYMENT TO PRODUCTION
+
 export default class InstagramFeed extends Component {
   static defaultProps = {
     instagramUrl: 'https://instagram.com/instagram',

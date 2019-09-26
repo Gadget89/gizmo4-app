@@ -124,6 +124,7 @@ export class Navigation extends Component {
                       }
                       checked={theme === 'dark'}
                     />{' '}
+                    {/* TO-DO: Display opposite mode with lightbulb icon */}
                     Dark Theme
                   </label>
                 )}

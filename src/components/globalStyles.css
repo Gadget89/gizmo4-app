@@ -22,10 +22,6 @@ body.dark nav {
   --background-color: var(--primary);
   --text-theme-color: white;
 }
-/* 
-body.dark svg {
-  color: white;
-} */
 
 /* Experimenting with focus outline for tab navigation */
 /* :focus {
@@ -50,6 +46,7 @@ body.dark svg {
   background: var(--primary);
   color: var(--lightGrey);
   /* TO-DO: CHANGE HIGHLIGT COLORS */
+  /* Needs to be seperated for dark and light mode! */
 }
 
 html {
@@ -79,7 +76,6 @@ main {
 a {
   color: var(--text-theme-color);
   text-decoration: none;
-  /* box-sizing: inherit; */
 }
 
 strong {
@@ -186,7 +182,6 @@ blockquote {
 .section {
   width: 100%;
   padding: 2vh 0;
-  /* border-bottom: 1px solid #f1f1f1; */
 }
 .section:last-child {
   border: 0;
@@ -215,7 +210,6 @@ blockquote {
 }
 
 .container {
-  /* max-width: 1111px; */
   width: 90vw;
   margin: 0 auto;
 }

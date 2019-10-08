@@ -5,6 +5,8 @@ import { serialize } from 'dom-form-serializer'
 
 import './Form.css'
 
+// TO-DO: Styles need to match accross app
+
 class Form extends React.Component {
   static defaultProps = {
     name: 'Simple Form Ajax',

@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import Cubes from '../components/Cubes'
 import './HomePage.css'
 
+// TO-DO: The landing page needs to be refactored to be accessable and changable through CMS. Start by looking at how cubes are implemented on blog index page to get an idea of where to start.
+
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ cubes, body }) => (
   <main>
